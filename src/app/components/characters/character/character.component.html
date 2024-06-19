@@ -1,0 +1,164 @@
+<div class="grid grid-cols-2 gap-2">
+    <label class="form-control w-full max-w-xs">
+        <div class="label">
+          <span class="label-text">Name</span>
+        </div>
+        <input type="text" [(ngModel)]="Name" class="input input-bordered w-full max-w-xs" />
+    </label>
+
+    <label class="form-control w-full max-w-xs">
+        <div class="label">
+          <span class="label-text">Environment</span>
+        </div>
+        <input type="text" [(ngModel)]="Environment" class="input input-bordered w-full max-w-xs" />
+    </label>
+
+    <label class="form-control w-full max-w-xs">
+        <div class="label">
+          <span class="label-text">Pronouns</span>
+        </div>
+        <input type="text" [(ngModel)]="Pronouns" class="input input-bordered w-full max-w-xs" />
+    </label>
+
+    <label class="form-control w-full max-w-xs">
+        <div class="label">
+          <span class="label-text">Early Outlook</span>
+        </div>
+        <input type="text" [(ngModel)]="EarlyOutlook" class="input input-bordered w-full max-w-xs" />
+    </label>
+
+    <label class="form-control w-full max-w-xs">
+        <div class="label">
+          <span class="label-text">Traits</span>
+        </div>
+        <input type="text" [(ngModel)]="Traits" class="input input-bordered w-full max-w-xs" />
+    </label>
+
+    <label class="form-control w-full max-w-xs">
+        <div class="label">
+          <span class="label-text">Education</span>
+        </div>
+        <input type="text" [(ngModel)]="Education" class="input input-bordered w-full max-w-xs" />
+    </label>
+
+    <label class="form-control w-full max-w-xs">
+      <div class="label">
+        <span class="label-text">Rank</span>
+      </div>
+      <input type="text" [(ngModel)]="Rank" class="input input-bordered w-full max-w-xs" />
+  </label>
+
+
+    <label class="form-control w-full max-w-xs">
+      <div class="label">
+        <span class="label-text">Career Length</span>
+      </div>
+      <input type="text" [(ngModel)]="CareerLength" class="input input-bordered w-full max-w-xs" />
+  </label>
+  
+<label class="form-control w-full max-w-xs">
+  <div class="label">
+    <span class="label-text">Assignment</span>
+  </div>
+  <input type="text" [(ngModel)]="Assignment" class="input input-bordered w-full max-w-xs" />
+</label>
+
+  <label class="form-control w-full max-w-xs">
+    <div class="label">
+      <span class="label-text">Career Events</span>
+    </div>
+    <input type="text" [(ngModel)]="CareerEvents" class="input input-bordered w-full max-w-xs" />
+</label>
+
+    <label class="col-span-2">  
+      <div class="label w-full">
+        <span class="label-text">Attributes</span>
+      </div>
+      <div class="grid grid-cols-3 gap-2">
+        <div class="join">
+          <button class="btn btn-primary join-item rounded-l-full w-1/2">Control</button>
+          <input [(ngModel)]="AttControl" class="input input-bordered join-item rounded-r-full w-1/2"/>
+        </div>
+        <div class="join">
+          <button class="btn btn-primary join-item rounded-l-full w-1/2">Daring</button>
+          <input [(ngModel)]="AttDaring" class="input input-bordered join-item rounded-r-full w-1/2"/>
+        </div>
+        <div class="join">
+          <button class="btn btn-primary join-item rounded-l-full w-1/2">Fitness</button>
+          <input [(ngModel)]="AttFitness" class="input input-bordered join-item rounded-r-full w-1/2"/>
+        </div>
+        <div class="join">
+          <button class="btn btn-primary join-item rounded-l-full w-1/2">Insight</button>
+          <input [(ngModel)]="AttInsight" class="input input-bordered join-item rounded-r-full w-1/2"/>
+        </div>
+        <div class="join">
+          <button class="btn btn-primary join-item rounded-l-full w-1/2">Presence</button>
+          <input [(ngModel)]="AttPresence" class="input input-bordered join-item rounded-r-full w-1/2"/>
+        </div>
+        <div class="join">
+          <button class="btn btn-primary join-item rounded-l-full w-1/2">Reason</button>
+          <input [(ngModel)]="AttReason" class="input input-bordered join-item rounded-r-full w-1/2"/>
+        </div>
+      </div>
+    </label>
+
+    <label class="col-span-2">  
+      <div class="label w-full">
+        <span class="label-text">Disciplines</span>
+      </div>
+      <div class="grid grid-cols-3 gap-2">
+        <div class="join">
+          <button class="btn btn-primary join-item rounded-l-full w-1/2">Command</button>
+          <input [(ngModel)]="DisCommand" class="input input-bordered join-item rounded-r-full w-1/2"/>
+        </div>
+        <div class="join">
+          <button class="btn btn-primary join-item rounded-l-full w-1/2">Conn</button>
+          <input [(ngModel)]="DisConn" class="input input-bordered join-item rounded-r-full w-1/2"/>
+        </div>
+        <div class="join">
+          <button class="btn btn-primary join-item rounded-l-full w-1/2">Security</button>
+          <input [(ngModel)]="DisSecurity" class="input input-bordered join-item rounded-r-full w-1/2"/>
+        </div>
+        <div class="join">
+          <button class="btn btn-primary join-item rounded-l-full w-1/2">Engineering</button>
+          <input [(ngModel)]="DisEngineering"class="input input-bordered join-item rounded-r-full w-1/2"/>
+        </div>
+        <div class="join">
+          <button class="btn btn-primary join-item rounded-l-full w-1/2">Science</button>
+          <input [(ngModel)]="DisScience" class="input input-bordered join-item rounded-r-full w-1/2"/>
+        </div>
+        <div class="join">
+          <button class="btn btn-primary join-item rounded-l-full w-1/2">Medicine</button>
+          <input [(ngModel)]="DisMedical" class="input input-bordered join-item rounded-r-full w-1/2"/>
+        </div>
+      </div>
+  </label>
+
+  
+  <label class="form-control w-full max-w-xs">
+    <div class="label">
+      <span class="label-text">Focuses</span>
+    </div>
+    <textarea class="textarea textarea-bordered w-full max-w-xs" [(ngModel)]="Focuses"></textarea>
+</label>
+
+
+<label class="form-control w-full max-w-xs">
+  <div class="label">
+    <span class="label-text">Values</span>
+  </div>
+  <textarea class="textarea textarea-bordered w-full max-w-xs" [(ngModel)]="Values"></textarea>
+</label>
+
+    <label class="col-span-2">  
+        <div class="label w-full">
+            <span class="label-text">Campaign Notes</span>
+          </div>
+        <div class="NgxEditor__Wrapper w-full">
+            <ngx-editor-menu [editor]="editor"> </ngx-editor-menu>
+            <ngx-editor [(ngModel)]="Notes" [editor]="editor"></ngx-editor>
+        </div>
+    </label>
+
+    <button class="btn btn-warning join-item rounded-full w-1/2" (click)="save()">Save</button>
+</div>

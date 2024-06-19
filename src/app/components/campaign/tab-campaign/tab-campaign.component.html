@@ -1,0 +1,21 @@
+<div class="grid grid-cols-1 gap-2">
+
+    <label class="form-control w-full max-w-xs">
+        <div class="label">
+          <span class="label-text">Campaign Title</span>
+        </div>
+        <input type="text" [(ngModel)]="title" placeholder="Campaign Title" class="input input-bordered w-full max-w-xs" />
+    </label>
+
+    <label>  
+        <div class="label w-full">
+            <span class="label-text">Campaign Notes</span>
+          </div>
+        <div class="NgxEditor__Wrapper w-full">
+            <ngx-editor-menu [editor]="editor"> </ngx-editor-menu>
+            <ngx-editor [(ngModel)]="notes" [editor]="editor"></ngx-editor>
+        </div>
+    </label>
+
+    <button class="btn btn-warning join-item rounded-full w-1/4" (click)="save()">Save</button>
+</div>
