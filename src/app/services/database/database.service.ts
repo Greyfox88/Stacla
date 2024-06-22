@@ -50,7 +50,10 @@ export interface Character extends CampaignObject {
   DisScience: number;
   DisMedical: number;
 
-  Notes: string;
+  Notes?: string;
+
+  IsCrew: boolean;
+  IsInScene: boolean;
 }
 
 //Ships and Stations
@@ -111,20 +114,37 @@ export class DatabaseService extends Dexie {
     this.Campaigns.put(campaign);
   }
 
-  getLog(campaginId: number, logId: number): Promise<Log|undefined>{
-    return this.Logs.get({CampaginId:campaginId, Id: logId});
+  getLog(logId: number): Promise<Log|undefined>{
+    return this.Logs.get({Id:logId});
   }
 
   putLog(log: Log) {
     this.Logs.put(log);
   }
 
-  getCharacter(campaginId: number, characterId: number): Promise<Character|undefined> {
-    return this.Characters.get({CampaginId: campaginId, Id: characterId});
+  deleteLog(logId: number) {
+    this.Logs.delete(logId);
+  }
+
+  getLogs(campaignId: number): Promise<Log[]|undefined[]> {
+    return this.Logs.where({CampaignId: campaignId}).toArray();
+  }
+
+  getCharacter(characterId: number): Promise<Character|undefined> {
+    return this.Characters.get({Id: characterId});
   }
 
   putCharacter(character: Character){
+    console.log(character);
     this.Characters.put(character);
+  }
+
+  deleteCharacter(characterId: number){
+    this.Characters.delete(characterId);
+  }
+
+  getCharacters(campaignId: number): Promise<Character[]|undefined[]> {
+    return this.Characters.where({CampaignId: campaignId}).toArray();
   }
 
   getShip(campaignId: number, shipId: number): Promise<Asset|undefined> {

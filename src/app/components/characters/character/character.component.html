@@ -1,3 +1,24 @@
+<div class="grid grid-cols-3 gap-2">
+  <div class="form-control">
+    <label class="label cursor-pointer">
+      <span class="label-text">Focused Character</span> 
+      <input type="checkbox" class="checkbox" disabled="true"/>
+    </label>
+  </div>
+  <div class="form-control">
+    <label class="label cursor-pointer">
+      <span class="label-text">Is in Crew</span> 
+      <input type="checkbox" [(ngModel)]="IsCrew" class="checkbox" />
+    </label>
+  </div>
+  <div class="form-control">
+    <label class="label cursor-pointer">
+      <span class="label-text">Is in Scene</span> 
+      <input type="checkbox"  [(ngModel)]="IsInScene"  class="checkbox" />
+    </label>
+  </div>
+</div>
+
 <div class="grid grid-cols-2 gap-2">
     <label class="form-control w-full max-w-xs">
         <div class="label">
@@ -160,5 +181,8 @@
         </div>
     </label>
 
-    <button class="btn btn-warning join-item rounded-full w-1/2" (click)="save()">Save</button>
+    <div class="flex">
+      <button class="btn btn-warning join-item rounded-full flex-initial w-48 mx-2" (click)="save()">Save</button>
+      <button class="btn btn-error join-item rounded-full flex-initial w-48 mx-2" (click)="delete()">Delete</button>
+  </div>
 </div>

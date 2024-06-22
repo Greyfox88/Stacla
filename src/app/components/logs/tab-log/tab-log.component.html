@@ -1,0 +1,16 @@
+<div class="grid grid-cols-1 gap-2">
+    <button class="btn btn-warning join-item rounded-full max-w-48" (click)="newEntry()">New Entry</button>
+    @for(log of logs; track log)
+    {
+        @if(log!=undefined)
+        {
+            <button class="btn btn-primary rounded-full max-w-96" type="button" (click)="focusLog(log.Id)">{{ log.Title }}</button>
+            @if(focusedLogId==log.Id)
+            {
+                <div class="divider"></div>
+                <app-log (logUpdatedEvent)="refreshLogs()" [logId]="log.Id"/>  
+                <div class="divider"></div> 
+            }
+        }    
+    }   
+</div>

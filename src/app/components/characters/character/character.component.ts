@@ -1,7 +1,7 @@
-import { Component, OnDestroy, OnInit, inject } from '@angular/core';
+import { Component, OnDestroy, OnInit, inject, Input, Output, EventEmitter } from '@angular/core';
 import { NgxEditorModule, Editor  } from 'ngx-editor';
-import { DatabaseService } from '../../../services/database/database.service';
 import {FormsModule} from '@angular/forms';
+import { CharacterService } from '../../../services/character/character.service';
 
 @Component({
   selector: 'app-character',
@@ -14,7 +14,9 @@ import {FormsModule} from '@angular/forms';
   styleUrl: './character.component.scss'
 })
 export class CharacterComponent implements OnInit, OnDestroy{
-  private database = inject(DatabaseService);
+  private characterService = inject(CharacterService);
+  @Input() characterId: number | undefined = 0;
+  @Output() characterUpdatedEvent = new EventEmitter();
 
   CampaignId: number = 0;
   Id?: number;
@@ -46,9 +48,49 @@ export class CharacterComponent implements OnInit, OnDestroy{
   DisMedical: number = 1;
 
   editor: Editor = new Editor;
-  Notes: string = '';
+  Notes?: string;
+
+  IsCrew: boolean = false;
+  IsInScene: boolean = false;
 
   ngOnInit(): void {
+    if(this.characterId!=undefined)
+      {
+        this.characterService.getCharacter(this.characterId).then(character =>{
+          if(character!=undefined)
+            {
+              this.Id = character.Id;
+              this.CampaignId = character.CampaignId;
+              this.Name = character.Name;
+              this.Environment = character.Environment;
+              this.Pronouns = character.Pronouns;
+              this.EarlyOutlook = character.EarlyOutlook;
+              this.Traits = character.Traits;
+              this.Education = character.Education;
+              this.Rank = character.Rank;
+              this.Assignment = character.Assignment;
+              this.CareerLength = character.CareerLength;
+              this.CareerEvents = character.CareerEvents;
+              this.Focuses = character.Focuses;
+              this.Values = character.Values;
+              this.AttControl = character.AttControl;
+              this.AttDaring = character.AttDaring;
+              this.AttFitness = character.AttFitness;
+              this.AttInsight = character.AttInsight;
+              this.AttPresence = character.AttPresence;
+              this.AttReason = character.AttReason;
+              this.DisCommand = character.DisCommand;
+              this.DisConn = character.DisConn;
+              this.DisSecurity = character.DisSecurity;
+              this.DisEngineering = character.DisEngineering;
+              this.DisScience = character.DisScience;
+              this.DisMedical = character.DisMedical;
+              this.Notes = character.Notes;
+              this.IsCrew = character.IsCrew;
+              this.IsInScene = character.IsInScene;
+            }       
+        });
+      }
     this.editor = new Editor();
   }
 
@@ -58,9 +100,10 @@ export class CharacterComponent implements OnInit, OnDestroy{
   }
 
   save(): void {
-    this.database.putCharacter({
+    console.log(this.IsCrew);
+    this.characterService.putCharacter({
       CampaignId: this.CampaignId,
-      Id: this.Id,
+      Id: this.characterId,
       Name: this.Name,
       Environment: this.Environment,
       Pronouns: this.Pronouns,
@@ -88,7 +131,17 @@ export class CharacterComponent implements OnInit, OnDestroy{
       DisScience: this.DisScience,
       DisMedical: this.DisMedical,
     
-      Notes: this.Notes
+      Notes: this.Notes,
+
+      IsCrew: this.IsCrew,
+      IsInScene: this.IsInScene
     });
+  }
+
+  delete():void {
+    if(this.characterId!=undefined)
+      {
+        this.characterService.deleteCharacter(this.characterId);
+      }   
   }
 }
