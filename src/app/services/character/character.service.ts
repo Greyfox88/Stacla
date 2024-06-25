@@ -1,6 +1,6 @@
 import { Injectable, inject, signal } from '@angular/core';
 import { DatabaseService, Character } from '../database/database.service';
-import { Observable, of, Subject } from 'rxjs';
+import { Subject } from 'rxjs';
 
 @Injectable({
   providedIn: 'root'
@@ -12,9 +12,6 @@ export class CharacterService {
   private database = inject(DatabaseService);
   characters?: Character[] | undefined[];
   campaignId = 0;
-
-  charObv = of(this.characters);
-  charSignal = signal<Character[] | undefined[]>([]);
   charSubject = new Subject<Character[] | undefined[]>();
 
   constructor() { }
@@ -36,7 +33,7 @@ export class CharacterService {
       DisScience: 1,
       DisMedical: 1,
 
-      IsCrew: false,
+      IsInCrew: false,
       IsInScene: false,
     })
     this.refreshCharacters();

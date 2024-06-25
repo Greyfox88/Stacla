@@ -52,7 +52,7 @@ export interface Character extends CampaignObject {
 
   Notes?: string;
 
-  IsCrew: boolean;
+  IsInCrew: boolean;
   IsInScene: boolean;
 }
 
@@ -82,6 +82,9 @@ export interface Asset extends CampaignObject {
 
   Notes?: string;
   Type?: number;
+
+  IsInFleet: boolean;
+  IsInScene: boolean;
 }
 
 @Injectable({
@@ -147,12 +150,20 @@ export class DatabaseService extends Dexie {
     return this.Characters.where({CampaignId: campaignId}).toArray();
   }
 
-  getShip(campaignId: number, shipId: number): Promise<Asset|undefined> {
-    return this.Assets.get({CampaignId: campaignId, Id: shipId, Type:this.ShipAssetType})
+  getAsset(assetId: number): Promise<Asset|undefined> {
+    return this.Assets.get({Id: assetId})
   }
 
-  putShip(ship: Asset){
+  putAsset(ship: Asset){
     ship.Type = this.ShipAssetType;
     this.Assets.put(ship);
+  }
+
+  deleteAsset(assetId: number){
+    this.Assets.delete(assetId);
+  }
+
+  getAssets(campaignId: number): Promise<Asset[]|undefined[]> {
+    return this.Assets.where({CampaignId: campaignId}).toArray();
   }
 }

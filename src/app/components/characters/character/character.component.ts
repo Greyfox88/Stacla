@@ -50,7 +50,7 @@ export class CharacterComponent implements OnInit, OnDestroy{
   editor: Editor = new Editor;
   Notes?: string;
 
-  IsCrew: boolean = false;
+  IsInCrew: boolean = false;
   IsInScene: boolean = false;
 
   ngOnInit(): void {
@@ -86,7 +86,7 @@ export class CharacterComponent implements OnInit, OnDestroy{
               this.DisScience = character.DisScience;
               this.DisMedical = character.DisMedical;
               this.Notes = character.Notes;
-              this.IsCrew = character.IsCrew;
+              this.IsInCrew = character.IsInCrew;
               this.IsInScene = character.IsInScene;
             }       
         });
@@ -100,7 +100,6 @@ export class CharacterComponent implements OnInit, OnDestroy{
   }
 
   save(): void {
-    console.log(this.IsCrew);
     this.characterService.putCharacter({
       CampaignId: this.CampaignId,
       Id: this.characterId,
@@ -133,7 +132,7 @@ export class CharacterComponent implements OnInit, OnDestroy{
     
       Notes: this.Notes,
 
-      IsCrew: this.IsCrew,
+      IsInCrew: this.IsInCrew,
       IsInScene: this.IsInScene
     });
   }

@@ -29,11 +29,11 @@ export class CharacterlistComponent implements OnInit{
     });
   }
 
-  focusCharacter(logId:number|undefined) {
-    if(this.focusedCharacterId === logId)
+  focusCharacter(charId:number|undefined) {
+    if(this.focusedCharacterId === charId)
       this.focusedCharacterId = undefined;
     else
-      this.focusedCharacterId = logId;
+      this.focusedCharacterId = charId;
   }
 
   refreshCharacters() {

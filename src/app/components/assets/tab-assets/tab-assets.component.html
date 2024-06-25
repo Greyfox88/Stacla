@@ -1,0 +1,15 @@
+<div class="grid grid-cols-1 gap-2">
+    <button class="btn btn-warning join-item rounded-full max-w-48" (click)="newAsset()">New Asset</button>
+    <!--Tabs-->
+    <div role="assettablist" class="tabs tabs-lifted">
+        <input type="radio" name="AssetTabs" role="tab" class="tab" aria-label="All" checked/>
+        <div role="tabpanel" class="tab-content bg-base-100 border-base-300 rounded-box p-6"><app-assetlist/></div>
+      
+        <input type="radio" name="AssetTabs" role="tab" class="tab" aria-label="Fleet"  />
+        <div role="tabpanel" class="tab-content bg-base-100 border-base-300 rounded-box p-6"><app-assetlist [FleetAssetList]="true"/></div>
+      
+        <input type="radio" name="AssetTabs" role="tab" class="tab" aria-label="Scene" />
+        <div role="tabpanel" class="tab-content bg-base-100 border-base-300 rounded-box p-6"><app-assetlist [SceneAssetList]="true"/></div>
+      </div>
+  </div>
+  

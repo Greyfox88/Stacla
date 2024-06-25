@@ -3,7 +3,7 @@
     {
         @if(character!=undefined)
         {
-            @if((CrewCharList==false || (CrewCharList && character.IsCrew)) && (SceneCharList==false || (SceneCharList && character.IsInScene)))
+            @if((CrewCharList==false || (CrewCharList && character.IsInCrew)) && (SceneCharList==false || (SceneCharList && character.IsInScene)))
             {
                 <button class="btn btn-primary rounded-full max-w-96" type="button" (click)="focusCharacter(character.Id)">{{ character.Rank}} {{ character.Name }}</button>
                 @if(focusedCharacterId==character.Id)
