@@ -11,7 +11,7 @@ export interface Campaign
 
 //Campaign Common
 export interface CampaignObject {
-  CampaignId: number;
+  CampaignId?: number;
 }
 
 export interface Log extends CampaignObject {
@@ -52,8 +52,8 @@ export interface Character extends CampaignObject {
 
   Notes?: string;
 
-  IsInCrew: boolean;
-  IsInScene: boolean;
+  IsInCrew?: boolean;
+  IsInScene?: boolean;
 }
 
 //Ships and Stations
@@ -83,8 +83,11 @@ export interface Asset extends CampaignObject {
   Notes?: string;
   Type?: number;
 
-  IsInFleet: boolean;
-  IsInScene: boolean;
+  IsInFleet?: boolean;
+  IsInScene?: boolean;
+
+  Era?: string;
+  Faction?: string;
 }
 
 @Injectable({

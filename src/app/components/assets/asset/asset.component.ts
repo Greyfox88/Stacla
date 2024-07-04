@@ -18,7 +18,7 @@ export class AssetComponent implements OnInit, OnDestroy{
   @Input() assetId: number | undefined = 0;
   @Output() assetUpdatedEvent = new EventEmitter();
 
-  CampaignId: number = 0;
+  CampaignId?: number = 0;
   Id?: number;
   Name: string = '';
   Class?: string;
@@ -43,8 +43,8 @@ export class AssetComponent implements OnInit, OnDestroy{
 
   Notes?: string;
 
-  IsInFleet: boolean = false;
-  IsInScene: boolean = false;
+  IsInFleet?: boolean = false;
+  IsInScene?: boolean = false;
 
   editor: Editor = new Editor;
 

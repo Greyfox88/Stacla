@@ -1,5 +1,18 @@
 <div class="grid grid-cols-1 gap-2">
-    <button class="btn btn-warning join-item rounded-full max-w-48" (click)="newAsset()">New Asset</button>
+    <div class="flex">
+        <button class="btn btn-warning join-item rounded-full max-w-250" (click)="newAsset()">New Asset</button>
+        <div class="dropdown w-250">
+            <div tabindex="0" role="button" class="btn btn-primary max-w-250">Add Preset</div>
+            <ul tabindex="0" name="AssetPresetList" class="dropdown-content menu bg-base-100 rounded-box z-[1] max-w-250 max-h-100 p-2 shadow">
+                @for(presetAsset of assetService.MasterAssetList; track presetAsset)
+                {
+                    <li><a (click)="newPresetAsset(presetAsset)">{{presetAsset.Name}}</a></li>
+                }
+            </ul>
+        </div>
+    </div>
+
+
     <!--Tabs-->
     <div role="assettablist" class="tabs tabs-lifted">
         <input type="radio" name="AssetTabs" role="tab" class="tab" aria-label="All" checked/>

@@ -1,18 +1,19 @@
 import { Injectable, inject, signal } from '@angular/core';
 import { DatabaseService, Asset } from '../database/database.service';
 import { Subject } from 'rxjs';
+import { MasterAssetList } from './MasterAssetList';
 
 @Injectable({
   providedIn: 'root'
 })
 
-export class AssetService {
+export class AssetService extends MasterAssetList{
   private database = inject(DatabaseService);
   assets?: Asset[] | undefined[];
   campaignId = 0;
   assetSubject = new Subject<Asset[] | undefined[]>();
 
-  constructor() { }
+  constructor() { super() }
 
   newAsset(): void {
     this.database.putAsset({

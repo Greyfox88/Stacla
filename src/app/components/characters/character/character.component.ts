@@ -18,7 +18,7 @@ export class CharacterComponent implements OnInit, OnDestroy{
   @Input() characterId: number | undefined = 0;
   @Output() characterUpdatedEvent = new EventEmitter();
 
-  CampaignId: number = 0;
+  CampaignId?: number = 0;
   Id?: number;
   Name: string = '';
   Environment?: string;
@@ -50,8 +50,8 @@ export class CharacterComponent implements OnInit, OnDestroy{
   editor: Editor = new Editor;
   Notes?: string;
 
-  IsInCrew: boolean = false;
-  IsInScene: boolean = false;
+  IsInCrew?: boolean = false;
+  IsInScene?: boolean = false;
 
   ngOnInit(): void {
     if(this.characterId!=undefined)

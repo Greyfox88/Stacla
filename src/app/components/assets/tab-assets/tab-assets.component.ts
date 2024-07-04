@@ -1,6 +1,7 @@
 import { Component,inject } from '@angular/core';
 import { AssetlistComponent } from '../assetlist/assetlist.component';
 import { AssetService } from '../../../services/asset/asset.service';
+import { Asset } from '../../../services/database/database.service';
 
 @Component({
   selector: 'app-tab-assets',
@@ -12,9 +13,15 @@ import { AssetService } from '../../../services/asset/asset.service';
   styleUrl: './tab-assets.component.scss'
 })
 export class TabAssetsComponent {
-  private assetService = inject(AssetService)
+  assetService = inject(AssetService)
 
   newAsset(){
     this.assetService.newAsset();
+  }
+
+  newPresetAsset(asset:Asset)
+  {
+    asset.CampaignId = this.assetService.campaignId;
+    this.assetService.putAsset(asset);
   }
 }
