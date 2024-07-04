@@ -1,9 +1,9 @@
 <div class="grid grid-cols-1 gap-2">
     <div class="flex">
-        <button class="btn btn-warning join-item rounded-full max-w-250" (click)="newAsset()">New Asset</button>
-        <div class="dropdown w-250">
-            <div tabindex="0" role="button" class="btn btn-primary max-w-250">Add Preset</div>
-            <ul tabindex="0" name="AssetPresetList" class="dropdown-content menu bg-base-100 rounded-box z-[1] max-w-250 max-h-100 p-2 shadow">
+        <button class="btn btn-warning join-item rounded-full w-48 mr-4" (click)="newAsset()">New Asset</button>
+        <div class="dropdown">
+            <div tabindex="0" role="button" class="btn btn-primary w-48">Add Preset</div>
+            <ul tabindex="0" name="AssetPresetList" class="dropdown-content menu bg-base-100 rounded-box z-[1] h-96 w-80  p-2 shadow" style="overflow-y: auto; overflow-x:clip; flex-direction: row; flex: content;">
                 @for(presetAsset of assetService.MasterAssetList; track presetAsset)
                 {
                     <li><a (click)="newPresetAsset(presetAsset)">{{presetAsset.Name}}</a></li>

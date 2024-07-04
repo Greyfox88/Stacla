@@ -231,8 +231,8 @@ export class MasterAssetList{
             Notes: "Stats from Captain's Log Book"
         },
         {
-            Name: "Federation Eagle Class",
-            Class: "Eagle Class",
+            Name: "Federation Engle Class",
+            Class: "Engle Class",
             Scale: 3,
             Traits: "Federation Starship",
           

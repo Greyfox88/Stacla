@@ -21,6 +21,7 @@ export class TabAssetsComponent {
 
   newPresetAsset(asset:Asset)
   {
+    asset.Id = undefined;
     asset.CampaignId = this.assetService.campaignId;
     this.assetService.putAsset(asset);
   }
