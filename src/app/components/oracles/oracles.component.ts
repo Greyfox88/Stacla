@@ -1,12 +1,16 @@
-import { Component } from '@angular/core';
+import { Component, inject } from '@angular/core';
+import { OracleMissionTypesService } from '../../services/oracles/oracle-mission-types.service';
+import { OracleComponent } from './oracle/oracle.component';
 
 @Component({
   selector: 'app-oracles',
   standalone: true,
-  imports: [],
+  imports: [
+    OracleComponent
+  ],
   templateUrl: './oracles.component.html',
   styleUrl: './oracles.component.scss'
 })
 export class OraclesComponent {
-  items = [1,2,3];
+  missionTypeOracle = inject(OracleMissionTypesService);
 }

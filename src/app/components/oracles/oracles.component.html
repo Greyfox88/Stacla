@@ -10,9 +10,6 @@
    </button>
 
    <div class="grid grid-cols-1 gap-2">
-   @for(item of items; track item)
-   {
-      <button class="btn btn-primary rounded-full" type="button">{{ item }}</button>
-   }
+      <app-oracle [oracle]="missionTypeOracle"/>
    </div>
 </div>

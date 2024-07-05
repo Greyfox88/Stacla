@@ -10,6 +10,21 @@
       <span class="sr-only">Close menu</span>
    </button>
    <div class="grid grid-cols-1 gap-2">
-      <button class="btn btn-primary rounded-full" type="button" (click)="roll()">About</button>
+      <button class="btn btn-primary rounded-full" type="button" onclick="aboutModal.showModal()">About</button>
    </div>
 </div>
+
+<dialog id="aboutModal" class="modal modal-bottom sm:modal-middle">
+   <div class="modal-box">
+     <h3 class="text-lg font-bold">About</h3>
+     <p class="py-4">Hello! Thank you for trying out my Star Trek Adventures Captain's Log Assistant (Sta'Cla!)</p>
+     <p class="py-4">This app is designed to try reduce the work involved in running your captain's log adventures to spend less time working out the mechanics and more time playing.</p>
+     <p class="py-4">If you find any issues or would be interested getting involved in making it better, feel free to drop by the <a href="https://github.com/Greyfox88/Stacla" target="_blank" rel="noopener noreferrer" style="text-decoration: underline;">GitHub Repo</a></p>
+     <div class="modal-action">
+       <form method="dialog">
+         <!-- if there is a button in form, it will close the modal -->
+         <button class="btn">Close</button>
+       </form>
+     </div>
+   </div>
+ </dialog>
