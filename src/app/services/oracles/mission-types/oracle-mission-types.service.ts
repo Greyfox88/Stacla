@@ -1,5 +1,5 @@
 import { Injectable } from '@angular/core';
-import { OracleBaseService } from './oracle-base.service';
+import { OracleBaseService } from '../oracle-base.service';
 
 @Injectable({
   providedIn: 'root'
@@ -13,7 +13,6 @@ export class OracleMissionTypesService extends OracleBaseService{
   public override getResult(valueOverride: number | undefined = undefined) : string 
   {
     let result = valueOverride === undefined ? this.rollerService.roll() : valueOverride;
-    console.log("R: " + result);
     switch(result)
     {
         case 1: return "Aid and Relief";
@@ -40,8 +39,6 @@ export class OracleMissionTypesService extends OracleBaseService{
                 let missionB = this.rollerService.roll(0,1,18);
                 while(missionB===missionA)
                     missionB = this.rollerService.roll(0,1,18);
-                console.log("MA: "+missionA);
-                console.log("MB: "+missionB);
                 return this.getResult(missionA) + " AND " + this.getResult(missionB);                
         default: return "Roll Again";
     }
