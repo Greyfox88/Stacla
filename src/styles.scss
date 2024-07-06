@@ -2,3 +2,6 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+app-root {   z-index: 1; }  
+app-toast, .toast-class {   z-index: 2; }

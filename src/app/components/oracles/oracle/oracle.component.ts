@@ -1,4 +1,4 @@
-import { Component, Input } from '@angular/core';
+import { Component, Input, Output, EventEmitter } from '@angular/core';
 import { OracleBaseService } from '../../../services/oracles/oracle-base.service';
 
 @Component({
@@ -10,9 +10,10 @@ import { OracleBaseService } from '../../../services/oracles/oracle-base.service
 })
 export class OracleComponent {
   @Input() oracle: OracleBaseService = new OracleBaseService();
+  @Output() oracleResultEvent = new EventEmitter();
 
   rollOracle()
   {
-    console.log(this.oracle.getResult());
+    this.oracleResultEvent.emit({oracle: this.oracle, result: this.oracle.getResult()});
   }
 }

@@ -10,13 +10,24 @@
    </button>
 
    <div class="grid grid-cols-1 gap-2">
-      <app-oracle [oracle]="missionTypeOracle"/>
-      <app-oracle [oracle]="incidentOracle"/>
-      <app-oracle [oracle]="themeOracle"/>
-      <app-oracle [oracle]="advantagesOracle"/>
-      <app-oracle [oracle]="complicationsOracle"/>
-      <app-oracle [oracle]="encounterOracle"/>
-      <app-oracle [oracle]="momentumOracle"/>
-      <app-oracle [oracle]="threatOracle"/>
+      <app-oracle [oracle]="missionTypeOracle" (oracleResultEvent)="showOracleModal($event)"/>
+      <app-oracle [oracle]="incidentOracle" (oracleResultEvent)="showOracleModal($event)"/>
+      <app-oracle [oracle]="themeOracle" (oracleResultEvent)="showOracleModal($event)"/>
+      <app-oracle [oracle]="advantagesOracle" (oracleResultEvent)="showOracleModal($event)"/>
+      <app-oracle [oracle]="complicationsOracle" (oracleResultEvent)="showOracleModal($event)"/>
+      <app-oracle [oracle]="encounterOracle" (oracleResultEvent)="showOracleModal($event)"/>
+      <app-oracle [oracle]="momentumOracle" (oracleResultEvent)="showOracleModal($event)"/>
+      <app-oracle [oracle]="threatOracle" (oracleResultEvent)="showOracleModal($event)"/>
    </div>
 </div>
+
+<dialog id="oracleModal" class="modal modal-bottom sm:modal-middle" [ngClass]="{'modal-open' : showModal}">
+   <div class="modal-box">
+     <h3 class="text-lg font-bold">{{modalTitle}}</h3>
+     <p class="py-4">{{modalMessage}}</p>
+     <div class="modal-action">
+         <button class="btn" (click)="rerollOracle()">Reroll</button>
+         <button class="btn" (click)="closeOracleModal()">Close</button>
+     </div>
+   </div>
+ </dialog>
