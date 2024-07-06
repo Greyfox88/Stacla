@@ -9,15 +9,35 @@
       <span class="sr-only">Close menu</span>
    </button>
 
-   <div class="grid grid-cols-1 gap-2">
-      <app-oracle [oracle]="missionTypeOracle" (oracleResultEvent)="showOracleModal($event)"/>
-      <app-oracle [oracle]="incidentOracle" (oracleResultEvent)="showOracleModal($event)"/>
-      <app-oracle [oracle]="themeOracle" (oracleResultEvent)="showOracleModal($event)"/>
-      <app-oracle [oracle]="advantagesOracle" (oracleResultEvent)="showOracleModal($event)"/>
-      <app-oracle [oracle]="complicationsOracle" (oracleResultEvent)="showOracleModal($event)"/>
-      <app-oracle [oracle]="encounterOracle" (oracleResultEvent)="showOracleModal($event)"/>
-      <app-oracle [oracle]="momentumOracle" (oracleResultEvent)="showOracleModal($event)"/>
-      <app-oracle [oracle]="threatOracle" (oracleResultEvent)="showOracleModal($event)"/>
+   <div class="grid grid-cols-2 gap-2">
+     <app-oracle class="btn-error" [oracle]="threatOracle" (oracleResultEvent)="showOracleModal($event)"/>
+     <app-oracle class="btn-success" [oracle]="momentumOracle" (oracleResultEvent)="showOracleModal($event)"/>
+     <div class="divider col-span-2 my-0"></div>
+    <p class="col-span-2 text-center">Mission Generation</p>
+    <app-oracle class="btn-primary col-span-2" [oracle]="missionTypeOracle" (oracleResultEvent)="showOracleModal($event)" />
+    <app-oracle class="btn-secondary" [oracle]="mtAidOracle" (oracleResultEvent)="showOracleModal($event)" />
+    <app-oracle class="btn-secondary" [oracle]="mtConspiracyOracle" (oracleResultEvent)="showOracleModal($event)" />
+    <app-oracle class="btn-secondary" [oracle]="mtDeepSpaceOracle" (oracleResultEvent)="showOracleModal($event)" />
+    <app-oracle class="btn-secondary" [oracle]="mtDefenceOracle" (oracleResultEvent)="showOracleModal($event)" />
+    <app-oracle class="btn-secondary" [oracle]="mtDiplomacyOracle" (oracleResultEvent)="showOracleModal($event)" />
+    <app-oracle class="btn-secondary" [oracle]="mtEscortOracle" (oracleResultEvent)="showOracleModal($event)" />
+    <app-oracle class="btn-secondary" [oracle]="mtEspionageOracle" (oracleResultEvent)="showOracleModal($event)" />
+    <app-oracle class="btn-secondary" [oracle]="mtFirstContactOracle" (oracleResultEvent)="showOracleModal($event)" />
+    <app-oracle class="btn-secondary" [oracle]="mtMedicalOracle" (oracleResultEvent)="showOracleModal($event)" />
+    <app-oracle class="btn-secondary" [oracle]="mtNearSpaceOracle" (oracleResultEvent)="showOracleModal($event)" />
+    <app-oracle class="btn-secondary" [oracle]="mtPatrolOracle" (oracleResultEvent)="showOracleModal($event)" />
+    <app-oracle class="btn-secondary" [oracle]="mtPlanetaryOracle" (oracleResultEvent)="showOracleModal($event)" />
+    <app-oracle class="btn-secondary" [oracle]="mtPoliticalOracle" (oracleResultEvent)="showOracleModal($event)" />
+    <app-oracle class="btn-secondary" [oracle]="mtReseachOracle" (oracleResultEvent)="showOracleModal($event)" />
+    <app-oracle class="btn-secondary" [oracle]="mtFlagOracle" (oracleResultEvent)="showOracleModal($event)" />
+    <app-oracle class="btn-secondary" [oracle]="mtSpiritualOracle" (oracleResultEvent)="showOracleModal($event)" />
+    <app-oracle class="btn-secondary" [oracle]="mtJagOracle" (oracleResultEvent)="showOracleModal($event)" />
+    <app-oracle class="btn-secondary" [oracle]="mtTacticalOracle" (oracleResultEvent)="showOracleModal($event)" />
+
+    <app-oracle class="btn-primary" [oracle]="incidentOracle" (oracleResultEvent)="showOracleModal($event)"/>
+    <app-oracle class="btn-primary" [oracle]="themeOracle" (oracleResultEvent)="showOracleModal($event)"/>
+    <app-oracle class="btn-error" [oracle]="complicationsOracle" (oracleResultEvent)="showOracleModal($event)"/>
+    <app-oracle class="btn-success" [oracle]="advantagesOracle" (oracleResultEvent)="showOracleModal($event)"/>
    </div>
 </div>
 
