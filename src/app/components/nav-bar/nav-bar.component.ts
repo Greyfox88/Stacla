@@ -11,7 +11,7 @@ import { TabLogComponent } from '../logs/tab-log/tab-log.component';
     TabCampaignComponent,
     TabLogComponent,
     TabCharactersComponent,
-    TabAssetsComponent,
+    TabAssetsComponent
   ],
   templateUrl: './nav-bar.component.html',
   styleUrl: './nav-bar.component.scss'
