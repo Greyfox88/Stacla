@@ -26,6 +26,16 @@
             "tsConfig": "tsconfig.app.json",
             "inlineStyleLanguage": "scss",
             "assets": [
+              "src/favicon.ico",
+              "src/favicon-16x16.ico",
+              "src/favicon-32x32.ico",
+              "src/apple-touch-icon.png",
+              "src/android-chrome-192x192.png",
+              "src/android-chrome-512x512.png",
+              "src/mstile-150x150.png",
+              "src/browserconfig.xml",
+              "src/safari-pinned-tab.svg",
+              "src/site.webmanifest",
               {
                 "glob": "**/*",
                 "input": "public"
@@ -85,6 +95,16 @@
             "tsConfig": "tsconfig.spec.json",
             "inlineStyleLanguage": "scss",
             "assets": [
+              "src/favicon.ico",
+              "src/favicon-16x16.ico",
+              "src/favicon-32x32.ico",
+              "src/apple-touch-icon.png",
+              "src/android-chrome-192x192.png",
+              "src/android-chrome-512x512.png",
+              "src/mstile-150x150.png",
+              "src/browserconfig.xml",
+              "src/safari-pinned-tab.svg",
+              "src/site.webmanifest",
               {
                 "glob": "**/*",
                 "input": "public"
