@@ -1,6 +1,7 @@
 import { Injectable, inject, signal } from '@angular/core';
 import { DatabaseService, Character } from '../database/database.service';
 import { Subject } from 'rxjs';
+import { MasterCharacterList } from './MasterCharacterList';
 
 @Injectable({
   providedIn: 'root'
@@ -8,13 +9,13 @@ import { Subject } from 'rxjs';
 
 
 
-export class CharacterService {
+export class CharacterService extends MasterCharacterList{
   private database = inject(DatabaseService);
   characters?: Character[] | undefined[];
   campaignId = 0;
   charSubject = new Subject<Character[] | undefined[]>();
 
-  constructor() { }
+  constructor() { super() }
 
   newCharacter(): void {
     this.database.putCharacter({

@@ -14,6 +14,9 @@ import { Asset } from '../../../services/database/database.service';
 })
 export class TabAssetsComponent {
   assetService = inject(AssetService)
+  eras = [...new Set(this.assetService.masterAssetList.map(item => item.Era))];
+  factions = [...new Set(this.assetService.masterAssetList.map(item => item.Faction))];
+  types = [...new Set(this.assetService.masterAssetList.map(item => item.Type))];
 
   newAsset(){
     this.assetService.newAsset();

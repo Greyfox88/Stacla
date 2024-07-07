@@ -54,6 +54,9 @@ export interface Character extends CampaignObject {
 
   IsInCrew?: boolean;
   IsInScene?: boolean;
+
+  Era?: string;
+  Faction?: string;
 }
 
 //Ships and Stations
@@ -81,13 +84,13 @@ export interface Asset extends CampaignObject {
   DeptMedical: number;  
 
   Notes?: string;
-  Type?: number;
 
   IsInFleet?: boolean;
   IsInScene?: boolean;
 
   Era?: string;
   Faction?: string;
+  Type?: string;
 }
 
 @Injectable({
@@ -158,7 +161,6 @@ export class DatabaseService extends Dexie {
   }
 
   putAsset(ship: Asset){
-    ship.Type = this.ShipAssetType;
     this.Assets.put(ship);
   }
 

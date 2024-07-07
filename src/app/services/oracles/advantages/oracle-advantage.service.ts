@@ -24,7 +24,7 @@ export class OracleAdvantageService extends OracleBaseService{
         case 6: return "Helpful Species - Primitive";
         case 7: return "Helpful Species - Contemporaries";
         case 8: return "Helpful Species - Advanced";
-        case 9: return "An Aincient Discovery";
+        case 9: return "An Ancient Discovery";
         case 10: return "Federation Assitance"
         case 11: return "Change of Heart";
         case 12: return "Redundant Systems";

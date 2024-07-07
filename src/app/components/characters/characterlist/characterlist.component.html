@@ -5,7 +5,7 @@
         {
             @if((CrewCharList==false || (CrewCharList && character.IsInCrew)) && (SceneCharList==false || (SceneCharList && character.IsInScene)))
             {
-                <button class="btn btn-primary rounded-full max-w-96" type="button" (click)="focusCharacter(character.Id)">{{ character.Rank}} {{ character.Name }}</button>
+                <button class="btn btn-primary rounded-full max-w-96" type="button" (click)="focusCharacter(character.Id)">{{ character.Name }}</button>
                 @if(focusedCharacterId==character.Id)
                 {
                     <div class="divider"></div>

@@ -33,7 +33,7 @@ export class OracleSpiritualMTService extends OracleBaseService{
         case 16: return "Science conflicts with long-held belief";
         case 17: return "Spiritual figure assassinated";
         case 18: return "Temple defaced or destroyed";
-        case 19: return "tradition unwittingly defiled by crew";
+        case 19: return "Tradition unwittingly defiled by crew";
         case 20: return "Vow broken by holy order";
         default: return "Roll Again";
     }

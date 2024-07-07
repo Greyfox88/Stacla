@@ -1,5 +1,18 @@
 <div class="grid grid-cols-1 gap-2">
-  <button class="btn btn-warning join-item rounded-full max-w-48" (click)="newCharacter()">New Character</button>
+  <div class="flex">
+    <button class="btn btn-warning join-item rounded-full max-w-48" (click)="newCharacter()">New Character</button>
+    <div class="divider lg:divider-horizontal"></div>
+    <div class="dropdown">
+        <div tabindex="0" role="button" class="btn btn-primary w-48">Add Preset</div>
+        <ul tabindex="0" name="AssetPresetList" class="dropdown-content menu bg-base-100 rounded-box z-[1] h-96 w-80  p-2 shadow" style="overflow-y: auto; overflow-x:clip; flex-direction: row; flex: content;">
+            @for(presetCharacter of characterService.masterCharacterList; track presetCharacter)
+            {
+                <li><a (click)="newPresetCharacter(presetCharacter)">{{presetCharacter.Name}}</a></li>
+            }
+        </ul>
+    </div>
+  </div>
+
   <!--Tabs-->
   <div role="charactertablist" class="tabs tabs-lifted">
       <input type="radio" name="CharacterTabs" role="tab" class="tab" aria-label="All" checked/>

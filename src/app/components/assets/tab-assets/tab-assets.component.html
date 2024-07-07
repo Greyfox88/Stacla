@@ -1,12 +1,40 @@
 <div class="grid grid-cols-1 gap-2">
     <div class="flex">
         <button class="btn btn-warning join-item rounded-full w-48 mr-4" (click)="newAsset()">New Asset</button>
+        <div class="divider lg:divider-horizontal"></div>
         <div class="dropdown">
             <div tabindex="0" role="button" class="btn btn-primary w-48">Add Preset</div>
             <ul tabindex="0" name="AssetPresetList" class="dropdown-content menu bg-base-100 rounded-box z-[1] h-96 w-80  p-2 shadow" style="overflow-y: auto; overflow-x:clip; flex-direction: row; flex: content;">
-                @for(presetAsset of assetService.MasterAssetList; track presetAsset)
+                @for(presetAsset of assetService.masterAssetList; track presetAsset)
                 {
                     <li><a (click)="newPresetAsset(presetAsset)">{{presetAsset.Name}}</a></li>
+                }
+            </ul>
+        </div>
+        <div class="dropdown">
+            <div tabindex="0" role="button" class="btn btn-primary w-48 mx-4">Era Filter</div>
+            <ul tabindex="0" name="AssetTypeList" class="dropdown-content menu bg-base-100 rounded-box z-[1] h-96 w-20  p-2 shadow" style="overflow-y: auto; overflow-x:clip; flex-direction: row; flex: content;">
+                @for(Era of eras; track Era)
+                {
+                    <li><a>{{Era}}</a></li> 
+                }
+            </ul>
+        </div>
+        <div class="dropdown">
+            <div tabindex="0" role="button" class="btn btn-primary w-48 mx-4">Faction Filter</div>
+            <ul tabindex="0" name="AssetTypeList" class="dropdown-content menu bg-base-100 rounded-box z-[1] h-96 w-48  p-2 shadow" style="overflow-y: auto; overflow-x:clip; flex-direction: row; flex: content;">
+                @for(Faction of factions; track Faction)
+                {
+                    <li><a>{{Faction}}</a></li> 
+                }
+            </ul>
+        </div>
+        <div class="dropdown">
+            <div tabindex="0" role="button" class="btn btn-primary w-48 mx-4">Type Filter</div>
+            <ul tabindex="0" name="AssetTypeList" class="dropdown-content menu bg-base-100 rounded-box z-[1] h-96 w-48  p-2 shadow" style="overflow-y: auto; overflow-x:clip; flex-direction: row; flex: content;">
+                @for(Type of types; track Type)
+                {
+                    <li><a>{{Type}}</a></li> 
                 }
             </ul>
         </div>

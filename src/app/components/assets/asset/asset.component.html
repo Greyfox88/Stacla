@@ -1,10 +1,4 @@
-<div class="grid grid-cols-3 gap-2">
-  <div class="form-control">
-    <label class="label cursor-pointer h-full">
-      <span class="label-text text-right w-full mr-5">Focused Asset</span> 
-      <input type="checkbox" class="checkbox" disabled="true"/>
-    </label>
-  </div>
+<div class="grid grid-cols-2 gap-2">
   <div class="form-control">
     <label class="label cursor-pointer h-full">
       <span class="label-text text-right w-full mr-5">Is in Fleet</span> 
@@ -20,7 +14,7 @@
 </div>
 
 
-<div class="grid grid-cols-2 gap-2">
+<div class="grid grid-cols-1 gap-2 md:grid-cols-2">
     <label class="form-control w-full max-w-xs">
         <div class="label">
           <span class="label-text">Name</span>
@@ -63,11 +57,11 @@
         <textarea class="textarea textarea-bordered w-full max-w-xs" [(ngModel)]="Talents"></textarea>
     </label>
 
-    <label class="col-span-2">  
+    <label class="col-span-1 md:col-span-2">  
       <div class="label w-full">
         <span class="label-text">Systems</span>
       </div>
-      <div class="grid grid-cols-3 gap-2">
+      <div class="grid grid-cols-2 gap-2 md:grid-cols-3">
         <div class="join">
           <button class="btn btn-primary join-item rounded-l-full w-1/2">Comms</button>
           <input [(ngModel)]="SysComms" class="input input-bordered join-item rounded-r-full w-1/2"/>
@@ -95,39 +89,39 @@
       </div>
     </label>
 
-    <label class="col-span-2">  
+    <label class="col-span-1 md:col-span-2">  
       <div class="label w-full">
         <span class="label-text">Departments</span>
       </div>
-      <div class="grid grid-cols-3 gap-2">
+      <div class="grid grid-cols-2 gap-2 md:grid-cols-3">
         <div class="join">
-          <button class="btn btn-primary join-item rounded-l-full w-1/2">Command</button>
+          <button class="btn btn-secondary join-item rounded-l-full w-1/2">Command</button>
           <input [(ngModel)]="DeptCommand" class="input input-bordered join-item rounded-r-full w-1/2"/>
         </div>
         <div class="join">
-          <button class="btn btn-primary join-item rounded-l-full w-1/2">Conn</button>
+          <button class="btn btn-secondary join-item rounded-l-full w-1/2">Conn</button>
           <input [(ngModel)]="DeptConn" class="input input-bordered join-item rounded-r-full w-1/2"/>
         </div>
         <div class="join">
-          <button class="btn btn-primary join-item rounded-l-full w-1/2">Security</button>
+          <button class="btn btn-secondary join-item rounded-l-full w-1/2">Security</button>
           <input [(ngModel)]="DeptSecurity" class="input input-bordered join-item rounded-r-full w-1/2"/>
         </div>
         <div class="join">
-          <button class="btn btn-primary join-item rounded-l-full w-1/2">Engineering</button>
+          <button class="btn btn-secondary join-item rounded-l-full w-1/2">Engineering</button>
           <input [(ngModel)]="DeptEngineering"class="input input-bordered join-item rounded-r-full w-1/2"/>
         </div>
         <div class="join">
-          <button class="btn btn-primary join-item rounded-l-full w-1/2">Science</button>
+          <button class="btn btn-secondary join-item rounded-l-full w-1/2">Science</button>
           <input [(ngModel)]="DeptScience" class="input input-bordered join-item rounded-r-full w-1/2"/>
         </div>
         <div class="join">
-          <button class="btn btn-primary join-item rounded-l-full w-1/2">Medicine</button>
+          <button class="btn btn-secondary join-item rounded-l-full w-1/2">Medicine</button>
           <input [(ngModel)]="DeptMedical" class="input input-bordered join-item rounded-r-full w-1/2"/>
         </div>
       </div>
   </label>
 
-    <label class="col-span-2">  
+    <label class="col-span-1 md:col-span-2">  
         <div class="label w-full">
             <span class="label-text">Notes</span>
           </div>
@@ -138,7 +132,7 @@
     </label>
 
     <div class="flex">
-      <button class="btn btn-warning join-item rounded-full flex-initial w-48 mx-2" (click)="save()">Save</button>
       <button class="btn btn-error join-item rounded-full flex-initial w-48 mx-2" (click)="delete()">Delete</button>
+      <button class="btn btn-warning join-item rounded-full flex-initial w-48 mx-2" (click)="save()">Save</button>
   </div>
 </div>
