@@ -1,43 +1,8 @@
 <div class="grid grid-cols-1 gap-2">
     <div class="flex">
-        <button class="btn btn-warning join-item rounded-full w-48 mr-4" (click)="newAsset()">New Asset</button>
-        <div class="divider lg:divider-horizontal"></div>
-        <div class="dropdown">
-            <div tabindex="0" role="button" class="btn btn-primary w-48">Add Preset</div>
-            <ul tabindex="0" name="AssetPresetList" class="dropdown-content menu bg-base-100 rounded-box z-[1] h-96 w-80  p-2 shadow" style="overflow-y: auto; overflow-x:clip; flex-direction: row; flex: content;">
-                @for(presetAsset of assetService.masterAssetList; track presetAsset)
-                {
-                    <li><a (click)="newPresetAsset(presetAsset)">{{presetAsset.Name}}</a></li>
-                }
-            </ul>
-        </div>
-        <div class="dropdown">
-            <div tabindex="0" role="button" class="btn btn-primary w-48 mx-4">Era Filter</div>
-            <ul tabindex="0" name="AssetTypeList" class="dropdown-content menu bg-base-100 rounded-box z-[1] h-96 w-20  p-2 shadow" style="overflow-y: auto; overflow-x:clip; flex-direction: row; flex: content;">
-                @for(Era of eras; track Era)
-                {
-                    <li><a>{{Era}}</a></li> 
-                }
-            </ul>
-        </div>
-        <div class="dropdown">
-            <div tabindex="0" role="button" class="btn btn-primary w-48 mx-4">Faction Filter</div>
-            <ul tabindex="0" name="AssetTypeList" class="dropdown-content menu bg-base-100 rounded-box z-[1] h-96 w-48  p-2 shadow" style="overflow-y: auto; overflow-x:clip; flex-direction: row; flex: content;">
-                @for(Faction of factions; track Faction)
-                {
-                    <li><a>{{Faction}}</a></li> 
-                }
-            </ul>
-        </div>
-        <div class="dropdown">
-            <div tabindex="0" role="button" class="btn btn-primary w-48 mx-4">Type Filter</div>
-            <ul tabindex="0" name="AssetTypeList" class="dropdown-content menu bg-base-100 rounded-box z-[1] h-96 w-48  p-2 shadow" style="overflow-y: auto; overflow-x:clip; flex-direction: row; flex: content;">
-                @for(Type of types; track Type)
-                {
-                    <li><a>{{Type}}</a></li> 
-                }
-            </ul>
-        </div>
+        <button class="btn btn-warning join-item rounded-full flex-1 max-w-40" (click)="newAsset()">New Asset</button>
+        <div class="divider divider-horizontal mx-2"></div>
+        <button class="btn btn-primary flex-1 max-w-40" onclick="presetAssetModal.showModal()">Add Preset</button>
     </div>
 
 
@@ -53,4 +18,47 @@
         <div role="tabpanel" class="tab-content bg-base-100 border-base-300 rounded-box p-6"><app-assetlist [SceneAssetList]="true"/></div>
       </div>
   </div>
+
+  <dialog id="presetAssetModal" class="modal modal-bottom sm:modal-middle">
+    <div class="modal-box">
+      <h3 class="text-lg font-bold">Preset Assets</h3>
+      <div class="grid grid-cols-3 gap-2 items-center">
+        <p class="col-span-3 text-center">Filters</p>
+        <select class="select select-bordered w-full max-w-xs" (change)="filterChange()" [(ngModel)]="eraFilter">
+          <option selected>Era</option>
+          @for(Era of eras; track Era)
+          {
+              <option>{{Era}}</option> 
+          }
+        </select>
+        <select class="select select-bordered w-full max-w-xs" (change)="filterChange()" [(ngModel)]="factionFilter">
+          <option selected>Faction</option>
+          @for(Faction of factions; track Faction)
+          {
+              <option>{{Faction}}</option> 
+          }
+        </select>
+        <select class="select select-bordered w-full max-w-xs" (change)="filterChange()" [(ngModel)]="typeFilter">
+          <option selected>Type</option>
+          @for(Type of types; track Type)
+          {
+              <option>{{Type}}</option> 
+          }
+        </select>
+        <div class="divider col-span-3 my-0"></div>
+      </div>
+      <div class="grid grid-cols-1 gap-2 items-center">
+        @for(presetAsset of filteredAssetList; track presetAsset)
+        {
+          <button class="btn btn-primary rounded-full max-w-96" type="button" (click)="newPresetAsset(presetAsset)">{{ presetAsset.Name }}</button>        
+        }   
+    </div>
+      <div class="modal-action">
+        <form method="dialog">
+          <!-- if there is a button in form, it will close the modal -->
+          <button class="btn">Close</button>
+        </form>
+      </div>
+    </div>
+  </dialog>
   
