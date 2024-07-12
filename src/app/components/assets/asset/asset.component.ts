@@ -2,6 +2,7 @@ import { Component, OnDestroy, OnInit, inject, Input, Output, EventEmitter } fro
 import { NgxEditorModule, Editor  } from 'ngx-editor';
 import {FormsModule} from '@angular/forms';
 import { AssetService } from '../../../services/asset/asset.service';
+import { RollerService } from '../../../services/roller/roller.service';
 
 @Component({
   selector: 'app-asset',
@@ -15,6 +16,7 @@ import { AssetService } from '../../../services/asset/asset.service';
 })
 export class AssetComponent implements OnInit, OnDestroy{
   private assetService = inject(AssetService);
+  private rollerService = inject(RollerService);
   @Input() assetId: number | undefined = 0;
   @Output() assetUpdatedEvent = new EventEmitter();
 
@@ -121,5 +123,11 @@ export class AssetComponent implements OnInit, OnDestroy{
       {
         this.assetService.deleteAsset(this.assetId);
       }   
+  }
+
+  rollField(mouseEvent: MouseEvent, fieldName: string, isDiscipline: boolean = false)
+  {
+    let target = mouseEvent.target as HTMLElement;
+    this.rollerService.prepareAsset(this, target.innerText, fieldName, isDiscipline);
   }
 }

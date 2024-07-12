@@ -2,6 +2,7 @@ import { Component, OnDestroy, OnInit, inject, Input, Output, EventEmitter } fro
 import { NgxEditorModule, Editor  } from 'ngx-editor';
 import {FormsModule} from '@angular/forms';
 import { CharacterService } from '../../../services/character/character.service';
+import { RollerService } from '../../../services/roller/roller.service';
 
 @Component({
   selector: 'app-character',
@@ -15,6 +16,7 @@ import { CharacterService } from '../../../services/character/character.service'
 })
 export class CharacterComponent implements OnInit, OnDestroy{
   private characterService = inject(CharacterService);
+  private rollerService = inject(RollerService);
   @Input() characterId: number | undefined = 0;
   @Output() characterUpdatedEvent = new EventEmitter();
 
@@ -142,5 +144,11 @@ export class CharacterComponent implements OnInit, OnDestroy{
       {
         this.characterService.deleteCharacter(this.characterId);
       }   
+  }
+
+  rollField(mouseEvent: MouseEvent, fieldName: string, isDiscipline: boolean = false)
+  {
+    let target = mouseEvent.target as HTMLElement;
+    this.rollerService.prepareCharacter(this, target.innerText, fieldName, isDiscipline);
   }
 }

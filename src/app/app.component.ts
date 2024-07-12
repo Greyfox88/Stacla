@@ -4,6 +4,7 @@ import { OraclesComponent } from './components/oracles/oracles.component';
 import { initFlowbite } from 'flowbite';
 import { MenuComponent } from './components/menu/menu.component';
 import { NavBarComponent } from './components/nav-bar/nav-bar.component';
+import { RollbarComponent } from './components/rollbar/rollbar.component';
 
 @Component({
   selector: 'app-root',
@@ -12,7 +13,8 @@ import { NavBarComponent } from './components/nav-bar/nav-bar.component';
     RouterOutlet,
     NavBarComponent,
     MenuComponent,
-    OraclesComponent
+    OraclesComponent,
+    RollbarComponent
   ],
   templateUrl: './app.component.html',
   styleUrl: './app.component.scss'
