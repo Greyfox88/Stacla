@@ -12,7 +12,7 @@ I'll probably leave the styling nearer to the end but aim to replicate a style s
 Angular has been used just to be able to reach the widest possible audience over multiple device types and later intending to implement PWA functionality so users can install it and explore strange new worlds on the go.
 
 # Contributing
-If you'd like to help feel free to get in touch. I've been in touch with the Modiphius amd they are happy with the project so long as it remains free and does not use assets from the source books.
+If you'd like to help feel free to get in touch. I've been in touch with the Modiphius amd they are happy with the project so long as it remains free and does not use assets from the source books. If you want to do translations check out the en.json file and make an equivalent and let me know.
 
 # Wishlist
 Translations

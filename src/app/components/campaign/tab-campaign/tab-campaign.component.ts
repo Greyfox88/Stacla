@@ -2,13 +2,15 @@ import { Component, OnDestroy, OnInit, inject, Input } from '@angular/core';
 import { NgxEditorModule, Editor  } from 'ngx-editor';
 import { DatabaseService } from '../../../services/database/database.service';
 import {FormsModule} from '@angular/forms';
+import { TranslateModule } from '@ngx-translate/core';
 
 @Component({
   selector: 'app-tab-campaign',
   standalone: true,
   imports: [
     NgxEditorModule,
-    FormsModule
+    FormsModule,
+    TranslateModule
   ],
   templateUrl: './tab-campaign.component.html',
   styleUrl: './tab-campaign.component.scss'

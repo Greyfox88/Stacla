@@ -32,7 +32,7 @@ export class RollbarComponent implements OnInit, OnDestroy{
     };
     const instanceOptions: InstanceOptions = {
       id: 'drawer-swipe',
-      override: false
+      override: true
     };
     const drawer: DrawerInterface = new Drawer($rollbar,options,instanceOptions);
       // show the drawer
@@ -48,5 +48,10 @@ export class RollbarComponent implements OnInit, OnDestroy{
   roll()
   {
     this.rollerService.rollForCharacterAsset();
+  }
+
+  recalculateTarget()
+  {
+    this.rollerService.recaulcuateTarget();
   }
 }

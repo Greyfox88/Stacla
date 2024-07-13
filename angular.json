@@ -10,14 +10,6 @@
           "style": "scss"
         }
       },
-      "i18n": {
-        "sourceLocale": "en-GB",
-        "locales": {
-          "de": {
-            "translation": "src/locale/messages.de.xlf"
-          }
-        }
-      },
       "root": "",
       "sourceRoot": "src",
       "prefix": "app",
@@ -35,6 +27,8 @@
             "tsConfig": "tsconfig.app.json",
             "inlineStyleLanguage": "scss",
             "assets": [
+              "src/assets/i18n/en.json",
+              "src/assets/i18n/de.json",
               "src/favicon.ico",
               "src/favicon-16x16.ico",
               "src/favicon-32x32.ico",
@@ -105,6 +99,8 @@
             "tsConfig": "tsconfig.spec.json",
             "inlineStyleLanguage": "scss",
             "assets": [
+              "src/assets/i18n/en.json",
+              "src/assets/i18n/de.json",
               "src/favicon.ico",
               "src/favicon-16x16.ico",
               "src/favicon-32x32.ico",

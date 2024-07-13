@@ -3,13 +3,15 @@ import { NgxEditorModule, Editor  } from 'ngx-editor';
 import {FormsModule} from '@angular/forms';
 import { AssetService } from '../../../services/asset/asset.service';
 import { RollerService } from '../../../services/roller/roller.service';
+import { TranslateModule } from '@ngx-translate/core';
 
 @Component({
   selector: 'app-asset',
   standalone: true,
   imports: [
     NgxEditorModule,
-    FormsModule
+    FormsModule,
+    TranslateModule
   ],
   templateUrl: './asset.component.html',
   styleUrl: './asset.component.scss'

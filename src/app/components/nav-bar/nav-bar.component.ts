@@ -4,6 +4,7 @@ import { TabCharactersComponent } from '../characters/tab-characters/tab-charact
 import { TabAssetsComponent } from '../assets/tab-assets/tab-assets.component';
 import { TabLogComponent } from '../logs/tab-log/tab-log.component';
 import { LocalizerComponent } from '../localizer/localizer.component';
+import { TranslateModule } from '@ngx-translate/core';
 
 @Component({
   selector: 'app-nav-bar',
@@ -13,7 +14,8 @@ import { LocalizerComponent } from '../localizer/localizer.component';
     TabCampaignComponent,
     TabLogComponent,
     TabCharactersComponent,
-    TabAssetsComponent
+    TabAssetsComponent,
+    TranslateModule
   ],
   templateUrl: './nav-bar.component.html',
   styleUrl: './nav-bar.component.scss'

@@ -1,18 +1,14 @@
-import { Component, inject } from '@angular/core';
-import { RollerService } from '../../services/roller/roller.service';
+import { Component } from '@angular/core';
+import { TranslateModule } from '@ngx-translate/core';
 
 @Component({
   selector: 'app-menu',
   standalone: true,
-  imports: [],
+  imports: [
+    TranslateModule
+  ],
   templateUrl: './menu.component.html',
   styleUrl: './menu.component.scss'
 })
 export class MenuComponent {
-  private rollerService = inject(RollerService);
-
-  roll()
-  {
-    console.log(this.rollerService.roll());
-  }
 }

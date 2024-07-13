@@ -12,22 +12,22 @@
   <app-localizer/>
   <div class="flex-none top-0 right-0">
     <button class="btn btn-square btn-ghost" type="button" data-drawer-placement="right" data-drawer-target="drawer-oracles" data-drawer-show="drawer-oracles" aria-controls="drawer-oracles">
-      <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" class="inline-block w-5 h-5 stroke-current"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 12h.01M12 12h.01M19 12h.01M6 12a1 1 0 11-2 0 1 1 0 012 0zm7 0a1 1 0 11-2 0 1 1 0 012 0zm7 0a1 1 0 11-2 0 1 1 0 012 0z"></path></svg>
+      <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" class="inline-block w-5 h-5 stroke-current" attr.aria-description="{{'Oracles' | translate}}"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 12h.01M12 12h.01M19 12h.01M6 12a1 1 0 11-2 0 1 1 0 012 0zm7 0a1 1 0 11-2 0 1 1 0 012 0zm7 0a1 1 0 11-2 0 1 1 0 012 0z"></path></svg>
     </button>
   </div>
 </div>
 
 <!--Tabs-->
 <div role="tablist" class="tabs tabs-lifted">
-  <input type="radio" name="NavTabs" role="tab" class="tab" aria-label="Campaign" checked/>
+  <input type="radio" name="NavTabs" role="tab" class="tab" attr.aria-label="{{'Campaign' | translate}}" checked/>
   <div role="tabpanel" class="tab-content bg-base-100 border-base-300 rounded-box p-6"><app-tab-campaign/></div>
 
-  <input type="radio" name="NavTabs" role="tab" class="tab" aria-label="Log"  />
+  <input type="radio" name="NavTabs" role="tab" class="tab" attr.aria-label="{{'Log' | translate}}"  />
   <div role="tabpanel" class="tab-content bg-base-100 border-base-300 rounded-box p-6"><app-tab-log/></div>
 
-  <input type="radio" name="NavTabs" role="tab" class="tab" aria-label="Characters" />
+  <input type="radio" name="NavTabs" role="tab" class="tab" attr.aria-label="{{'Characters' | translate}}" />
   <div role="tabpanel" class="tab-content bg-base-100 border-base-300 rounded-box p-6"><app-tab-characters/></div>
 
-  <input type="radio" name="NavTabs" role="tab" class="tab" aria-label="Assets" />
+  <input type="radio" name="NavTabs" role="tab" class="tab" attr.aria-label="{{'Assets' | translate}}" />
   <div role="tabpanel" class="tab-content bg-base-100 border-base-300 rounded-box p-6"><app-tab-assets/></div>
 </div>

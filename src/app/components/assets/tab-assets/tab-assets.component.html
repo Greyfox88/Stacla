@@ -1,50 +1,62 @@
 <div class="grid grid-cols-1 gap-2">
     <div class="flex">
-        <button i18n class="btn btn-warning join-item rounded-full flex-1 max-w-40" (click)="newAsset()">New Asset</button>
+        <button i18n class="btn btn-warning join-item rounded-full flex-1 max-w-40" (click)="newAsset()">{{'NewAsset' | translate}}</button>
         <div class="divider divider-horizontal mx-2"></div>
-        <button i18n class="btn btn-primary flex-1 max-w-40" onclick="presetAssetModal.showModal()">Add Preset</button>
+        <button i18n class="btn btn-primary flex-1 max-w-40" onclick="presetAssetModal.showModal()">{{'AddPreset' | translate}}</button>
     </div>
 
 
     <!--Tabs-->
     <div role="assettablist" class="tabs tabs-lifted">
-        <input type="radio" name="AssetTabs" role="tab" class="tab" aria-label="All" checked/>
+        <input type="radio" name="AssetTabs" role="tab" class="tab" attr.aria-label="{{'All' | translate}}" checked/>
         <div role="tabpanel" class="tab-content bg-base-100 border-base-300 rounded-box p-6"><app-assetlist/></div>
       
-        <input type="radio" name="AssetTabs" role="tab" class="tab" aria-label="Fleet"  />
+        <input type="radio" name="AssetTabs" role="tab" class="tab" attr.aria-label="{{'Fleet' | translate}}"  />
         <div role="tabpanel" class="tab-content bg-base-100 border-base-300 rounded-box p-6"><app-assetlist [FleetAssetList]="true"/></div>
       
-        <input type="radio" name="AssetTabs" role="tab" class="tab" aria-label="Scene" />
+        <input type="radio" name="AssetTabs" role="tab" class="tab" attr.aria-label="{{'Scene' | translate}}" />
         <div role="tabpanel" class="tab-content bg-base-100 border-base-300 rounded-box p-6"><app-assetlist [SceneAssetList]="true"/></div>
       </div>
   </div>
 
   <dialog id="presetAssetModal" class="modal modal-bottom sm:modal-middle">
     <div class="modal-box">
-      <h3 i18n class="text-lg font-bold">Preset Assets</h3>
+      <h3 i18n class="text-lg font-bold">{{'PresetAssets' | translate}}</h3>
       <div class="grid grid-cols-3 gap-2 items-center">
-        <p i18n class="col-span-3 text-center">Filters</p>
-        <select class="select select-bordered w-full max-w-xs" (change)="filterChange()" [(ngModel)]="eraFilter">
-          <option i18n selected>Era</option>
-          @for(Era of eras; track Era)
-          {
-              <option>{{Era}}</option> 
-          }
-        </select>
-        <select class="select select-bordered w-full max-w-xs" (change)="filterChange()" [(ngModel)]="factionFilter">
-          <option i18n selected>Faction</option>
-          @for(Faction of factions; track Faction)
-          {
-              <option>{{Faction}}</option> 
-          }
-        </select>
-        <select class="select select-bordered w-full max-w-xs" (change)="filterChange()" [(ngModel)]="typeFilter">
-          <option i18n selected>Type</option>
-          @for(Type of types; track Type)
-          {
-              <option>{{Type}}</option> 
-          }
-        </select>
+        <p i18n class="col-span-3 text-center">{{'Filters' | translate}}</p>
+
+        <div class="relative">
+          <select id="eraFilterBox" class="select select-bordered w-full max-w-xs" (change)="filterChange()" [(ngModel)]="eraFilter">
+            <option i18n selected></option>
+            @for(Era of eras; track Era)
+            {
+                <option>{{Era}}</option> 
+            }
+          </select>
+          <label for="eraFilterBox" class="absolute text-sm text-gray-500 dark:text-gray-400 duration-300 transform -translate-y-4 scale-75 top-4 z-10 origin-[0] start-2.5 peer-focus:text-blue-600 peer-focus:dark:text-blue-500 peer-placeholder-shown:scale-100 peer-placeholder-shown:translate-y-0 peer-focus:scale-75 peer-focus:-translate-y-4 rtl:peer-focus:translate-x-1/4 rtl:peer-focus:left-auto">{{'Era' | translate}}</label>
+        </div>
+
+        <div class="relative">
+          <select id="factionFilterBox" class="select select-bordered w-full max-w-xs" (change)="filterChange()" [(ngModel)]="factionFilter">
+            <option i18n selected></option>
+            @for(Faction of factions; track Faction)
+            {
+                <option>{{Faction}}</option> 
+            }
+          </select>
+          <label for="factionFilterBox" class="absolute text-sm text-gray-500 dark:text-gray-400 duration-300 transform -translate-y-4 scale-75 top-4 z-10 origin-[0] start-2.5 peer-focus:text-blue-600 peer-focus:dark:text-blue-500 peer-placeholder-shown:scale-100 peer-placeholder-shown:translate-y-0 peer-focus:scale-75 peer-focus:-translate-y-4 rtl:peer-focus:translate-x-1/4 rtl:peer-focus:left-auto">{{'Faction' | translate}}</label>
+        </div>
+
+        <div class="relative">
+          <select id="typeFilterBox" class="select select-bordered w-full max-w-xs" (change)="filterChange()" [(ngModel)]="typeFilter">
+            <option i18n selected></option>
+            @for(Type of types; track Type)
+            {
+                <option>{{Type}}</option> 
+            }
+          </select>
+          <label for="typeFilterBox" class="absolute text-sm text-gray-500 dark:text-gray-400 duration-300 transform -translate-y-4 scale-75 top-4 z-10 origin-[0] start-2.5 peer-focus:text-blue-600 peer-focus:dark:text-blue-500 peer-placeholder-shown:scale-100 peer-placeholder-shown:translate-y-0 peer-focus:scale-75 peer-focus:-translate-y-4 rtl:peer-focus:translate-x-1/4 rtl:peer-focus:left-auto">{{'Type' | translate}}</label>
+        </div>
         <div class="divider col-span-3 my-0"></div>
       </div>
       <div class="grid grid-cols-1 gap-2 items-center">
@@ -56,7 +68,7 @@
       <div class="modal-action">
         <form method="dialog">
           <!-- if there is a button in form, it will close the modal -->
-          <button i18n class="btn">Close</button>
+          <button i18n class="btn">{{'Close' | translate}}</button>
         </form>
       </div>
     </div>

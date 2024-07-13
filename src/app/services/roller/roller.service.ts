@@ -31,8 +31,7 @@ export class RollerService {
   }
 
   clear()
-  {
-
+  {    
     this.SourceName = "";
     this.LabelA = "";
     this.LabelB = "";
@@ -44,8 +43,15 @@ export class RollerService {
     this.RollB = 0;
     this.ResultA = false;
     this.ResultB = false;
+    this.recaulcuateTarget();
     this.updatedRoller.emit();
   }
+
+  recaulcuateTarget()
+  {
+    this.Target = Number(this.ValueA) + Number(this.ValueB) + Number(this.Modifier);
+  }
+
 
   rollForCharacterAsset(){
     this.RollA = this.roll();
@@ -74,7 +80,7 @@ export class RollerService {
     if(this.KeyCharacterB != undefined)    
       this.ValueB = character[this.KeyCharacterB as keyof Character] as number;    
 
-    this.Target = this.ValueA + this.ValueB + this.Modifier;
+    this.recaulcuateTarget();
     this.updatedRoller.emit();
   }
 
@@ -99,7 +105,7 @@ export class RollerService {
     if(this.KeyCharacterB != undefined)    
       this.ValueB = asset[this.KeyCharacterB as keyof Asset] as number;    
 
-    this.Target = this.ValueA + this.ValueB + this.Modifier;
+    this.recaulcuateTarget();
     this.updatedRoller.emit();
   }
 }
