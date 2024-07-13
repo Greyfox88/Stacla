@@ -1,13 +1,13 @@
 <div class="grid grid-cols-2 gap-2">
   <div class="form-control">
     <label class="label cursor-pointer h-full">
-      <span class="label-text text-right w-full mr-5">Is in Fleet</span> 
+      <span i18n class="label-text text-right w-full mr-5">Is in Fleet</span> 
       <input type="checkbox" [(ngModel)]="IsInFleet" class="checkbox" />
     </label>
   </div>
   <div class="form-control">
     <label class="label cursor-pointer h-full">
-      <span class="label-text text-right w-full mr-5">Is in Scene</span> 
+      <span i18n class="label-text text-right w-full mr-5">Is in Scene</span> 
       <input type="checkbox"  [(ngModel)]="IsInScene"  class="checkbox" />
     </label>
   </div>
@@ -17,73 +17,73 @@
 <div class="grid grid-cols-1 gap-2 md:grid-cols-2">
     <label class="form-control w-full max-w-xs">
         <div class="label">
-          <span class="label-text">Name</span>
+          <span i18n class="label-text">Name</span>
         </div>
         <input type="text" [(ngModel)]="Name" class="input input-bordered w-full max-w-xs" />
     </label>
 
     <label class="form-control w-full max-w-xs">
         <div class="label">
-          <span class="label-text">Class</span>
+          <span i18n class="label-text">Class</span>
         </div>
         <input type="text" [(ngModel)]="Class" class="input input-bordered w-full max-w-xs" />
     </label>
 
     <label class="form-control w-full max-w-xs">
         <div class="label">
-          <span class="label-text">Registry</span>
+          <span i18n class="label-text">Registry</span>
         </div>
         <input type="text" [(ngModel)]="Registry" class="input input-bordered w-full max-w-xs" />
     </label>
 
     <label class="form-control w-full max-w-xs">
         <div class="label">
-          <span class="label-text">Scale</span>
+          <span i18n class="label-text">Scale</span>
         </div>
         <input type="text" [(ngModel)]="Scale" class="input input-bordered w-full max-w-xs" />
     </label>
 
     <label class="form-control w-full max-w-xs">
         <div class="label">
-          <span class="label-text">Traits</span>
+          <span i18n class="label-text">Traits</span>
         </div>
         <textarea class="textarea textarea-bordered w-full max-w-xs" [(ngModel)]="Traits"></textarea>
     </label>
 
     <label class="form-control w-full max-w-xs">
         <div class="label">
-          <span class="label-text">Talents</span>
+          <span i18n class="label-text">Talents</span>
         </div>
         <textarea class="textarea textarea-bordered w-full max-w-xs" [(ngModel)]="Talents"></textarea>
     </label>
 
     <label class="col-span-1 md:col-span-2">  
       <div class="label w-full">
-        <span class="label-text">Systems</span>
+        <span i18n class="label-text">Systems</span>
       </div>
       <div class="grid grid-cols-2 gap-2 md:grid-cols-3">
         <div class="join">
-          <button class="btn btn-primary join-item rounded-l-full w-1/2" (click)="rollField($event,'SysComms')">Comms</button>
+          <button i18n class="btn btn-primary join-item rounded-l-full w-1/2" (click)="rollField($event,'SysComms')">Comms</button>
           <input [(ngModel)]="SysComms" class="input input-bordered join-item rounded-r-full w-1/2"/>
         </div>
         <div class="join">
-          <button class="btn btn-primary join-item rounded-l-full w-1/2" (click)="rollField($event,'SysComputers')">Computers</button>
+          <button i18n class="btn btn-primary join-item rounded-l-full w-1/2" (click)="rollField($event,'SysComputers')">Computers</button>
           <input [(ngModel)]="SysComputers" class="input input-bordered join-item rounded-r-full w-1/2"/>
         </div>
         <div class="join">
-          <button class="btn btn-primary join-item rounded-l-full w-1/2" (click)="rollField($event,'SysEngines')">Engines</button>
+          <button i18n class="btn btn-primary join-item rounded-l-full w-1/2" (click)="rollField($event,'SysEngines')">Engines</button>
           <input [(ngModel)]="SysEngines" class="input input-bordered join-item rounded-r-full w-1/2"/>
         </div>
         <div class="join">
-          <button class="btn btn-primary join-item rounded-l-full w-1/2" (click)="rollField($event,'SysSensors')">Sensors</button>
+          <button i18n class="btn btn-primary join-item rounded-l-full w-1/2" (click)="rollField($event,'SysSensors')">Sensors</button>
           <input [(ngModel)]="SysSensors" class="input input-bordered join-item rounded-r-full w-1/2"/>
         </div>
         <div class="join">
-          <button class="btn btn-primary join-item rounded-l-full w-1/2" (click)="rollField($event,'SysStructure')">Structure</button>
+          <button i18n class="btn btn-primary join-item rounded-l-full w-1/2" (click)="rollField($event,'SysStructure')">Structure</button>
           <input [(ngModel)]="SysStructure" class="input input-bordered join-item rounded-r-full w-1/2"/>
         </div>
         <div class="join">
-          <button class="btn btn-primary join-item rounded-l-full w-1/2" (click)="rollField($event,'SysWeapons')">Weapons</button>
+          <button i18n class="btn btn-primary join-item rounded-l-full w-1/2" (click)="rollField($event,'SysWeapons')">Weapons</button>
           <input [(ngModel)]="SysWeapons" class="input input-bordered join-item rounded-r-full w-1/2"/>
         </div>
       </div>
@@ -91,31 +91,31 @@
 
     <label class="col-span-1 md:col-span-2">  
       <div class="label w-full">
-        <span class="label-text">Departments</span>
+        <span i18n class="label-text">Departments</span>
       </div>
       <div class="grid grid-cols-2 gap-2 md:grid-cols-3">
         <div class="join">
-          <button class="btn btn-secondary join-item rounded-l-full w-1/2" (click)="rollField($event,'DeptCommand',true)">Command</button>
+          <button i18n class="btn btn-secondary join-item rounded-l-full w-1/2" (click)="rollField($event,'DeptCommand',true)">Command</button>
           <input [(ngModel)]="DeptCommand" class="input input-bordered join-item rounded-r-full w-1/2"/>
         </div>
         <div class="join">
-          <button class="btn btn-secondary join-item rounded-l-full w-1/2" (click)="rollField($event,'DeptConn',true)">Conn</button>
+          <button i18n class="btn btn-secondary join-item rounded-l-full w-1/2" (click)="rollField($event,'DeptConn',true)">Conn</button>
           <input [(ngModel)]="DeptConn" class="input input-bordered join-item rounded-r-full w-1/2"/>
         </div>
         <div class="join">
-          <button class="btn btn-secondary join-item rounded-l-full w-1/2" (click)="rollField($event,'DeptSecurity',true)">Security</button>
+          <button i18n class="btn btn-secondary join-item rounded-l-full w-1/2" (click)="rollField($event,'DeptSecurity',true)">Security</button>
           <input [(ngModel)]="DeptSecurity" class="input input-bordered join-item rounded-r-full w-1/2"/>
         </div>
         <div class="join">
-          <button class="btn btn-secondary join-item rounded-l-full w-1/2" (click)="rollField($event,'DeptEngineering',true)">Engineering</button>
+          <button i18n class="btn btn-secondary join-item rounded-l-full w-1/2" (click)="rollField($event,'DeptEngineering',true)">Engineering</button>
           <input [(ngModel)]="DeptEngineering"class="input input-bordered join-item rounded-r-full w-1/2"/>
         </div>
         <div class="join">
-          <button class="btn btn-secondary join-item rounded-l-full w-1/2" (click)="rollField($event,'DeptScience',true)">Science</button>
+          <button i18n class="btn btn-secondary join-item rounded-l-full w-1/2" (click)="rollField($event,'DeptScience',true)">Science</button>
           <input [(ngModel)]="DeptScience" class="input input-bordered join-item rounded-r-full w-1/2"/>
         </div>
         <div class="join">
-          <button class="btn btn-secondary join-item rounded-l-full w-1/2" (click)="rollField($event,'DeptMedical',true)">Medicine</button>
+          <button i18n class="btn btn-secondary join-item rounded-l-full w-1/2" (click)="rollField($event,'DeptMedical',true)">Medicine</button>
           <input [(ngModel)]="DeptMedical" class="input input-bordered join-item rounded-r-full w-1/2"/>
         </div>
       </div>
@@ -123,7 +123,7 @@
 
     <label class="col-span-1 md:col-span-2">  
         <div class="label w-full">
-            <span class="label-text">Notes</span>
+            <span i18n class="label-text">Notes</span>
           </div>
         <div class="NgxEditor__Wrapper w-full">
             <ngx-editor-menu [editor]="editor"> </ngx-editor-menu>
@@ -132,7 +132,7 @@
     </label>
 
     <div class="flex">
-      <button class="btn btn-error join-item rounded-full flex-initial w-48 mx-2" (click)="delete()">Delete</button>
-      <button class="btn btn-warning join-item rounded-full flex-initial w-48 mx-2" (click)="save()">Save</button>
+      <button i18n class="btn btn-error join-item rounded-full flex-initial w-48 mx-2" (click)="delete()">Delete</button>
+      <button i18n class="btn btn-warning join-item rounded-full flex-initial w-48 mx-2" (click)="save()">Save</button>
   </div>
 </div>

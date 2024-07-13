@@ -1,13 +1,13 @@
 <div class="grid grid-cols-2 gap-2">
   <div class="form-control">
     <label class="label cursor-pointer h-full">
-      <span class="label-text text-right w-full mr-5">Is in Crew</span> 
+      <span i18n class="label-text text-right w-full mr-5">Is in Crew</span> 
       <input type="checkbox" [(ngModel)]="IsInCrew" class="checkbox" />
     </label>
   </div>
   <div class="form-control">
     <label class="label cursor-pointer h-full">
-      <span class="label-text text-right w-full mr-5">Is in Scene</span> 
+      <span i18n class="label-text text-right w-full mr-5">Is in Scene</span> 
       <input type="checkbox"  [(ngModel)]="IsInScene"  class="checkbox" />
     </label>
   </div>
@@ -16,49 +16,49 @@
 <div class="grid grid-cols-1 gap-2 md:grid-cols-2">
     <label class="form-control w-full max-w-xs">
         <div class="label">
-          <span class="label-text">Name</span>
+          <span i18n class="label-text">Name</span>
         </div>
         <input type="text" [(ngModel)]="Name" class="input input-bordered w-full max-w-xs" />
     </label>
 
     <label class="form-control w-full max-w-xs">
         <div class="label">
-          <span class="label-text">Environment</span>
+          <span i18n class="label-text">Environment</span>
         </div>
         <input type="text" [(ngModel)]="Environment" class="input input-bordered w-full max-w-xs" />
     </label>
 
     <label class="form-control w-full max-w-xs">
         <div class="label">
-          <span class="label-text">Pronouns</span>
+          <span i18n class="label-text">Pronouns</span>
         </div>
         <input type="text" [(ngModel)]="Pronouns" class="input input-bordered w-full max-w-xs" />
     </label>
 
     <label class="form-control w-full max-w-xs">
         <div class="label">
-          <span class="label-text">Early Outlook</span>
+          <span i18n class="label-text">Early Outlook</span>
         </div>
         <input type="text" [(ngModel)]="EarlyOutlook" class="input input-bordered w-full max-w-xs" />
     </label>
 
     <label class="form-control w-full max-w-xs">
         <div class="label">
-          <span class="label-text">Traits</span>
+          <span i18n class="label-text">Traits</span>
         </div>
         <input type="text" [(ngModel)]="Traits" class="input input-bordered w-full max-w-xs" />
     </label>
 
     <label class="form-control w-full max-w-xs">
         <div class="label">
-          <span class="label-text">Education</span>
+          <span i18n class="label-text">Education</span>
         </div>
         <input type="text" [(ngModel)]="Education" class="input input-bordered w-full max-w-xs" />
     </label>
 
     <label class="form-control w-full max-w-xs">
       <div class="label">
-        <span class="label-text">Rank</span>
+        <span i18n class="label-text">Rank</span>
       </div>
       <input type="text" [(ngModel)]="Rank" class="input input-bordered w-full max-w-xs" />
   </label>
@@ -66,52 +66,52 @@
 
     <label class="form-control w-full max-w-xs">
       <div class="label">
-        <span class="label-text">Career Length</span>
+        <span i18n class="label-text">Career Length</span>
       </div>
       <input type="text" [(ngModel)]="CareerLength" class="input input-bordered w-full max-w-xs" />
   </label>
   
 <label class="form-control w-full max-w-xs">
   <div class="label">
-    <span class="label-text">Assignment</span>
+    <span i18n class="label-text">Assignment</span>
   </div>
   <input type="text" [(ngModel)]="Assignment" class="input input-bordered w-full max-w-xs" />
 </label>
 
   <label class="form-control w-full max-w-xs">
     <div class="label">
-      <span class="label-text">Career Events</span>
+      <span i18n class="label-text">Career Events</span>
     </div>
     <input type="text" [(ngModel)]="CareerEvents" class="input input-bordered w-full max-w-xs" />
 </label>
 
     <label class="col-span-1 md:col-span-2">  
       <div class="label w-full">
-        <span class="label-text">Attributes</span>
+        <span i18n class="label-text">Attributes</span>
       </div>
       <div class="grid grid-cols-2 gap-2 md:grid-cols-3">
         <div class="join">
-          <button class="btn btn-primary join-item rounded-l-full w-1/2" (click)="rollField($event,'AttControl')">Control</button>
+          <button i18n class="btn btn-primary join-item rounded-l-full w-1/2" (click)="rollField($event,'AttControl')">Control</button>
           <input [(ngModel)]="AttControl" class="input input-bordered join-item rounded-r-full w-1/2"/>
         </div>
         <div class="join">
-          <button class="btn btn-primary join-item rounded-l-full w-1/2" (click)="rollField($event,'AttDaring')">Daring</button>
+          <button i18n class="btn btn-primary join-item rounded-l-full w-1/2" (click)="rollField($event,'AttDaring')">Daring</button>
           <input [(ngModel)]="AttDaring" class="input input-bordered join-item rounded-r-full w-1/2"/>
         </div>
         <div class="join">
-          <button class="btn btn-primary join-item rounded-l-full w-1/2" (click)="rollField($event,'AttFitness')">Fitness</button>
+          <button i18n class="btn btn-primary join-item rounded-l-full w-1/2" (click)="rollField($event,'AttFitness')">Fitness</button>
           <input [(ngModel)]="AttFitness" class="input input-bordered join-item rounded-r-full w-1/2"/>
         </div>
         <div class="join">
-          <button class="btn btn-primary join-item rounded-l-full w-1/2" (click)="rollField($event,'AttInsight')">Insight</button>
+          <button i18n class="btn btn-primary join-item rounded-l-full w-1/2" (click)="rollField($event,'AttInsight')">Insight</button>
           <input [(ngModel)]="AttInsight" class="input input-bordered join-item rounded-r-full w-1/2"/>
         </div>
         <div class="join">
-          <button class="btn btn-primary join-item rounded-l-full w-1/2" (click)="rollField($event,'AttPresence')">Presence</button>
+          <button i18n class="btn btn-primary join-item rounded-l-full w-1/2" (click)="rollField($event,'AttPresence')">Presence</button>
           <input [(ngModel)]="AttPresence" class="input input-bordered join-item rounded-r-full w-1/2"/>
         </div>
         <div class="join">
-          <button class="btn btn-primary join-item rounded-l-full w-1/2" (click)="rollField($event,'AttReason')">Reason</button>
+          <button i18n class="btn btn-primary join-item rounded-l-full w-1/2" (click)="rollField($event,'AttReason')">Reason</button>
           <input [(ngModel)]="AttReason" class="input input-bordered join-item rounded-r-full w-1/2"/>
         </div>
       </div>
@@ -119,31 +119,31 @@
 
     <label class="col-span-1 md:col-span-2">  
       <div class="label w-full">
-        <span class="label-text">Disciplines</span>
+        <span i18n class="label-text">Disciplines</span>
       </div>
       <div class="grid grid-cols-2 gap-2 md:grid-cols-3">
         <div class="join">
-          <button class="btn btn-secondary join-item rounded-l-full w-1/2"  (click)="rollField($event,'DisCommand',true)">Command</button>
+          <button i18n class="btn btn-secondary join-item rounded-l-full w-1/2"  (click)="rollField($event,'DisCommand',true)">Command</button>
           <input [(ngModel)]="DisCommand" class="input input-bordered join-item rounded-r-full w-1/2"/>
         </div>
         <div class="join">
-          <button class="btn btn-secondary join-item rounded-l-full w-1/2" (click)="rollField($event,'DisConn',true)">Conn</button>
+          <button i18n class="btn btn-secondary join-item rounded-l-full w-1/2" (click)="rollField($event,'DisConn',true)">Conn</button>
           <input [(ngModel)]="DisConn" class="input input-bordered join-item rounded-r-full w-1/2"/>
         </div>
         <div class="join">
-          <button class="btn btn-secondary join-item rounded-l-full w-1/2" (click)="rollField($event,'DisSecurity',true)">Security</button>
+          <button i18n class="btn btn-secondary join-item rounded-l-full w-1/2" (click)="rollField($event,'DisSecurity',true)">Security</button>
           <input [(ngModel)]="DisSecurity" class="input input-bordered join-item rounded-r-full w-1/2"/>
         </div>
         <div class="join">
-          <button class="btn btn-secondary join-item rounded-l-full w-1/2" (click)="rollField($event,'DisEngineering',true)">Engineering</button>
+          <button i18n class="btn btn-secondary join-item rounded-l-full w-1/2" (click)="rollField($event,'DisEngineering',true)">Engineering</button>
           <input [(ngModel)]="DisEngineering"class="input input-bordered join-item rounded-r-full w-1/2"/>
         </div>
         <div class="join">
-          <button class="btn btn-secondary join-item rounded-l-full w-1/2" (click)="rollField($event,'DisScience',true)">Science</button>
+          <button i18n class="btn btn-secondary join-item rounded-l-full w-1/2" (click)="rollField($event,'DisScience',true)">Science</button>
           <input [(ngModel)]="DisScience" class="input input-bordered join-item rounded-r-full w-1/2"/>
         </div>
         <div class="join">
-          <button class="btn btn-secondary join-item rounded-l-full w-1/2" (click)="rollField($event,'DisMedical',true)">Medicine</button>
+          <button i18n class="btn btn-secondary join-item rounded-l-full w-1/2" (click)="rollField($event,'DisMedical',true)">Medicine</button>
           <input [(ngModel)]="DisMedical" class="input input-bordered join-item rounded-r-full w-1/2"/>
         </div>
       </div>
@@ -152,7 +152,7 @@
   
   <label class="form-control w-full max-w-xs">
     <div class="label">
-      <span class="label-text">Focuses</span>
+      <span i18n class="label-text">Focuses</span>
     </div>
     <textarea class="textarea textarea-bordered w-full max-w-xs" [(ngModel)]="Focuses"></textarea>
 </label>
@@ -160,14 +160,14 @@
 
 <label class="form-control w-full max-w-xs">
   <div class="label">
-    <span class="label-text">Values</span>
+    <span i18n class="label-text">Values</span>
   </div>
   <textarea class="textarea textarea-bordered w-full max-w-xs" [(ngModel)]="Values"></textarea>
 </label>
 
     <label class="col-span-1 md:col-span-2">  
         <div class="label w-full">
-            <span class="label-text">Campaign Notes</span>
+            <span i18n class="label-text">Campaign Notes</span>
           </div>
         <div class="NgxEditor__Wrapper w-full">
             <ngx-editor-menu [editor]="editor"> </ngx-editor-menu>
@@ -176,7 +176,7 @@
     </label>
 
     <div class="flex">
-      <button class="btn btn-error join-item rounded-full flex-initial w-48 mx-2" (click)="delete()">Delete</button>
-      <button class="btn btn-warning join-item rounded-full flex-initial w-48 mx-2" (click)="save()">Save</button>
+      <button i18n class="btn btn-error join-item rounded-full flex-initial w-48 mx-2" (click)="delete()">Delete</button>
+      <button i18n class="btn btn-warning join-item rounded-full flex-initial w-48 mx-2" (click)="save()">Save</button>
   </div>
 </div>

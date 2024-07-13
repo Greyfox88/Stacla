@@ -1,8 +1,8 @@
 <div class="grid grid-cols-1 gap-2">
     <div class="flex">
-        <button class="btn btn-warning join-item rounded-full flex-1 max-w-40" (click)="newAsset()">New Asset</button>
+        <button i18n class="btn btn-warning join-item rounded-full flex-1 max-w-40" (click)="newAsset()">New Asset</button>
         <div class="divider divider-horizontal mx-2"></div>
-        <button class="btn btn-primary flex-1 max-w-40" onclick="presetAssetModal.showModal()">Add Preset</button>
+        <button i18n class="btn btn-primary flex-1 max-w-40" onclick="presetAssetModal.showModal()">Add Preset</button>
     </div>
 
 
@@ -21,25 +21,25 @@
 
   <dialog id="presetAssetModal" class="modal modal-bottom sm:modal-middle">
     <div class="modal-box">
-      <h3 class="text-lg font-bold">Preset Assets</h3>
+      <h3 i18n class="text-lg font-bold">Preset Assets</h3>
       <div class="grid grid-cols-3 gap-2 items-center">
-        <p class="col-span-3 text-center">Filters</p>
+        <p i18n class="col-span-3 text-center">Filters</p>
         <select class="select select-bordered w-full max-w-xs" (change)="filterChange()" [(ngModel)]="eraFilter">
-          <option selected>Era</option>
+          <option i18n selected>Era</option>
           @for(Era of eras; track Era)
           {
               <option>{{Era}}</option> 
           }
         </select>
         <select class="select select-bordered w-full max-w-xs" (change)="filterChange()" [(ngModel)]="factionFilter">
-          <option selected>Faction</option>
+          <option i18n selected>Faction</option>
           @for(Faction of factions; track Faction)
           {
               <option>{{Faction}}</option> 
           }
         </select>
         <select class="select select-bordered w-full max-w-xs" (change)="filterChange()" [(ngModel)]="typeFilter">
-          <option selected>Type</option>
+          <option i18n selected>Type</option>
           @for(Type of types; track Type)
           {
               <option>{{Type}}</option> 
@@ -56,7 +56,7 @@
       <div class="modal-action">
         <form method="dialog">
           <!-- if there is a button in form, it will close the modal -->
-          <button class="btn">Close</button>
+          <button i18n class="btn">Close</button>
         </form>
       </div>
     </div>
