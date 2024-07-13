@@ -14,4 +14,17 @@ Angular has been used just to be able to reach the widest possible audience over
 # Contributing
 If you'd like to help feel free to get in touch. I've been in touch with the Modiphius amd they are happy with the project so long as it remains free and does not use assets from the source books.
 
+# Wishlist
+Translations
+Import/Export
+Drawing scenes/maps
+Adding more presets from all source books
+Chained Oracles (one click mission generation etc...)
+Factional theming (klingon/romulan looks etc...)
+Quick actions on Character/Asset lists (Change categories, quick delete...)
+Multiple Campaigns
+
+# Known Issues
+Opening the Rollbar though selecting character or asset attributes requires two clicks to close.
+
 Qapla'!

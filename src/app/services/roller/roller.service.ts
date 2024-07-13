@@ -1,6 +1,5 @@
 import { EventEmitter, Injectable, Output } from '@angular/core';
 import { Asset, Character } from '../database/database.service';
-import { Subject } from 'rxjs';
 
 @Injectable({
   providedIn: 'root'
@@ -33,6 +32,7 @@ export class RollerService {
 
   clear()
   {
+
     this.SourceName = "";
     this.LabelA = "";
     this.LabelB = "";
