@@ -37,6 +37,7 @@
      <div class="modal-action">
        <form method="dialog">
          <!-- if there is a button in form, it will close the modal -->
+         <button class="btn btn-sm btn-circle btn-ghost absolute right-2 top-2">✕</button>
          <button i18n class="btn">Close</button>
        </form>
      </div>
@@ -50,6 +51,7 @@
     <input #fileUpload [accept]="'.json'" type="file" class="file-input"(change)="onFileSelected($event)">
     <div class="modal-action">
       <form method="dialog">
+        <button class="btn btn-sm btn-circle btn-ghost absolute right-2 top-2">✕</button>
         <button i18n class="btn btn-primary">Close</button>
         <button class="btn btn-warning" (click)="importData()">Import</button>
       </form>

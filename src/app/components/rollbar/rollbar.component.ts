@@ -17,26 +17,34 @@ import { FormsModule } from '@angular/forms';
 })
 export class RollbarComponent implements OnInit, OnDestroy{
   rollerService = inject(RollerService)
+  private drawerShowing: Boolean = false;
+  private drawer: DrawerInterface | undefined;
  
   ngOnDestroy(): void {
     this.rollerService.updatedRoller.unsubscribe();
   }
   ngOnInit(): void {
-    this.rollerService.updatedRoller.subscribe(x => {
-      const $rollbar: HTMLElement | null = document.getElementById('drawer-swipe');
-      const options: DrawerOptions = {
-        placement: 'bottom',
-        backdrop: false,
-        bodyScrolling: true,
-        edge: true,
+    const $rollbar: HTMLElement | null = document.getElementById('drawer-swipe');
+    const options: DrawerOptions = {
+      placement: 'bottom',
+      backdrop: false,
+      bodyScrolling: true,
+      edge: true,
+      onHide: () => {
+        this.drawerShowing = false;
+      },
+      onShow: () => {
+        this.drawerShowing = true;
+      },
     };
     const instanceOptions: InstanceOptions = {
       id: 'drawer-swipe',
       override: true
     };
-    const drawer: DrawerInterface = new Drawer($rollbar,options,instanceOptions);
-      // show the drawer
-      drawer.show();
+    this.drawer = new Drawer($rollbar,options,instanceOptions);
+    this.rollerService.updatedRoller.subscribe(x => {
+      if(this.drawer!=undefined)
+        this.drawer.show();
     });
   }
 
@@ -53,5 +61,10 @@ export class RollbarComponent implements OnInit, OnDestroy{
   recalculateTarget()
   {
     this.rollerService.recaulcuateTarget();
+  }
+
+  toggleRollbar()
+  {
+    this.drawer?.toggle();
   }
 }

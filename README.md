@@ -25,6 +25,6 @@ Quick actions on Character/Asset lists (Change categories, quick delete...)
 Multiple Campaigns
 
 # Known Issues
-Opening the Rollbar though selecting character or asset attributes requires two clicks to close.
+Formatting for various screen sizes needs reviewed
 
 Qapla'!
