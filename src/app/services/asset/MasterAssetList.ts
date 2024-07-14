@@ -30,8 +30,8 @@ export class MasterAssetList{
             Notes: "Stats from Utopia Planitia Book"
         },
         {
-            Name: "Federation Deadalus Class",
-            Class: "Deadalus Class",
+            Name: "Federation Dqedalus Class",
+            Class: "Dqeadalus Class",
             Scale: 3,
             Traits: "United Earth/Federation Starship",
             Talents: "Grappler Cables\nPolarized Hull Plating\nRugged Design",

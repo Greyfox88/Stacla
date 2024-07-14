@@ -1,5 +1,6 @@
 import { Injectable } from '@angular/core';
 import Dexie, { Table } from 'dexie';
+import { exportDB, importDB } from 'dexie-export-import';
 
 //Campaign Model
 export interface Campaign
@@ -170,5 +171,32 @@ export class DatabaseService extends Dexie {
 
   getAssets(campaignId: number): Promise<Asset[]|undefined[]> {
     return this.Assets.where({CampaignId: campaignId}).toArray();
+  }
+
+  importFiles(blob: Blob){
+    this.clearData(false);
+    importDB(blob).then(x => {
+      window.location.reload();
+    });
+  }
+
+  exportFiles = async () => {
+    const dbBlob = await exportDB(this, { prettyJson: true });
+    let fileName = `${this.name}.backup.json`;
+    const link = document.createElement("a");
+    link.href = URL.createObjectURL(dbBlob);
+    link.download = fileName;
+    link.click();
+    link.remove(); 
+  };
+
+
+  clearData(reload:boolean = true){
+    this.Campaigns.clear();
+    this.Logs.clear();
+    this.Characters.clear();
+    this.Assets.clear();
+    if(reload)
+      window.location.reload();
   }
 }

@@ -62,7 +62,7 @@
       <div class="grid grid-cols-1 gap-2 items-center">
         @for(presetAsset of filteredAssetList; track presetAsset)
         {
-          <button class="btn btn-primary rounded-full max-w-96" type="button" (click)="newPresetAsset(presetAsset)">{{ presetAsset.Name }}</button>        
+          <button class="btn btn-primary rounded-full w-96" style="margin: auto;" type="button" (click)="newPresetAsset(presetAsset)">{{ presetAsset.Name }}</button>        
         }   
     </div>
       <div class="modal-action">
