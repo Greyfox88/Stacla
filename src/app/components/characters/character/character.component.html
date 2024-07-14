@@ -165,15 +165,18 @@
   <textarea class="textarea textarea-bordered w-full max-w-xs" [(ngModel)]="Values"></textarea>
 </label>
 
-    <label class="col-span-1 md:col-span-2">  
-        <div class="label w-full">
-            <span i18n class="label-text">Campaign Notes</span>
-          </div>
-        <div class="NgxEditor__Wrapper w-full">
-            <ngx-editor-menu [editor]="editor"> </ngx-editor-menu>
-            <ngx-editor [(ngModel)]="Notes" [editor]="editor"></ngx-editor>
-        </div>
-    </label>
+<div  class="col-span-1 md:col-span-2">
+  <label>  
+    <div class="label w-full">
+        <span i18n class="label-text">Campaign Notes</span>
+      </div>
+  </label>
+  <div class="NgxEditor__Wrapper w-full">
+    <ngx-editor-menu [editor]="editor"> </ngx-editor-menu>
+    <ngx-editor [(ngModel)]="Notes" [editor]="editor"></ngx-editor>
+  </div>
+</div>
+
 
     <div class="flex">
       <button i18n class="btn btn-error join-item rounded-full flex-initial w-48 mx-2" (click)="delete()">Delete</button>

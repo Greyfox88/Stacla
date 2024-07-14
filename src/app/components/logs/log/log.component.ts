@@ -21,7 +21,7 @@ export class LogComponent implements OnInit, OnDestroy{
   @Output() logUpdatedEvent = new EventEmitter();
   
   protected title = '';
-  protected editor: Editor = new Editor;
+  protected editor: Editor = new Editor
   protected entry = '';
 
 

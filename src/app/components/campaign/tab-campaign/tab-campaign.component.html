@@ -11,11 +11,11 @@
         <div class="label w-full">
             <span i18n class="label-text">{{'CampaignNotes' | translate}}</span>
           </div>
-        <div class="NgxEditor__Wrapper w-full">
-            <ngx-editor-menu [editor]="editor"> </ngx-editor-menu>
-            <ngx-editor [(ngModel)]="notes" [editor]="editor"></ngx-editor>
-        </div>
     </label>
+    <div class="NgxEditor__Wrapper w-full">
+        <ngx-editor-menu [editor]="editor"> </ngx-editor-menu>
+        <ngx-editor  [editor]="editor" [(ngModel)]="notes"></ngx-editor>
+    </div>
 
     <button i18n class="btn btn-warning join-item rounded-full w-1/4" (click)="save()">{{'Save' | translate}}</button>
 </div>
