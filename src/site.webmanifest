@@ -1,6 +1,9 @@
 {
-    "name": "",
-    "short_name": "",
+    "name": "Sta'Cla",
+    "short_name": "Sta'Cla",
+    "description": "Star Trek Adventures: Captain's Log Assistant",
+    "scope": "./",
+    "start_url": "https://greyfox88.github.io/Stacla/",
     "icons": [
         {
             "src": "./android-chrome-192x192.png",
