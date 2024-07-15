@@ -1,0 +1,85 @@
+<div id="drawer-oracles" class="fixed top-0 right-0 z-40 h-screen p-4 overflow-y-auto transition-transform translate-x-full bg-neutral text-neutral-content w-80 " tabindex="-1" aria-labelledby="drawer-oracles-label">
+    <h5 i18n id="drawer-label" class="inline-flex items-center mb-4 font-semibold"><svg class="w-4 h-4 me-2.5" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="currentColor" viewBox="0 0 20 20">
+    <path d="M10 .5a9.5 9.5 0 1 0 9.5 9.5A9.51 9.51 0 0 0 10 .5ZM9.5 4a1.5 1.5 0 1 1 0 3 1.5 1.5 0 0 1 0-3ZM12 15H8a1 1 0 0 1 0-2h1v-3H8a1 1 0 0 1 0-2h2a1 1 0 0 1 1 1v4h1a1 1 0 0 1 0 2Z"/>
+  </svg>Reference</h5>
+   <button type="button" data-drawer-hide="drawer-oracles" aria-controls="drawer-oracles" class="text-gray-400 bg-transparent hover:bg-gray-200 hover:text-gray-900 rounded-lg text-sm w-8 h-8 absolute top-2.5 end-2.5 inline-flex items-center justify-center dark:hover:bg-gray-600 dark:hover:text-white" >
+      <svg class="w-3 h-3" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 14 14">
+         <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="m1 1 6 6m0 0 6 6M7 7l6-6M7 7l-6 6"/>
+      </svg>
+      <span i18n class="sr-only">Close menu</span>
+   </button>
+
+   <!--TODO define CSS classes for the reference list-->
+   <div class="grid grid-cols-1">
+      <h1 class="col-span-1 text-center text-xl font-bold">Quick D20</h1>
+      <p class="col-span-1 text-center text-6xl font-bold">{{quickRoll}}</p>
+      <br/>
+      <button i18n class="btn btn-primary rounded-full" type="button" (click)="quickRollD20()">Roll</button>
+      <div class="divider divider-accent col-span-1 my-0"></div>
+      <h1 class="col-span-1 text-center text-xl font-bold">Reference</h1>
+      <div class="grid grid-cols-4">
+         <p class="col-span-4">Where to find in the Captain's Log book.</p>
+         <p class="col-span-3 font-bold underline">Topic</p><p class="text-right font-bold underline">Page</p>
+         <p class="col-span-3">Introduction</p><p class="text-right">1</p>
+         <br/>
+         <p class="col-span-4 underline text-center">Chapter 1: Star Trek Defined</p>
+         <p class="col-span-3">What is Star Trek?</p><p class="text-right">8</p>
+         <p class="col-span-3">What is Captain's Log?</p><p class="text-right">13</p>
+         <br/>
+         <p class="col-span-4 underline text-center">Chapter 2: The Star Trek Universe</p>
+         <p class="col-span-3">Society</p><p class="text-right">18</p>
+         <p class="col-span-3">A Primer on Star Trek Technology</p><p class="text-right">23</p>
+         <p class="col-span-3">Service Protocols</p><p class="text-right">38</p>
+         <p class="col-span-3">Eras of Play</p><p class="text-right">45</p>
+         <p class="col-span-3">Styles of Play</p><p class="text-right">53</p>
+         <br/>
+         <p class="col-span-4 underline text-center">Chapter 3: Reporting for Duty</p>
+         <p class="col-span-3">A Career in Starfleet</p><p class="text-right">72</p>
+         <p class="col-span-3">Lifepath Creation</p><p class="text-right">91</p>
+         <p class="col-span-3">Creation in Play</p><p class="text-right">133</p>
+         <p class="col-span-3">Character Development</p><p class="text-right">135</p>
+         <p class="col-span-3">Character Conversion</p><p class="text-right">137</p>
+         <br/>
+         <p class="col-span-4 underline text-center">Chapter 4: Your Home in the Stars</p>
+         <p class="col-span-3">Creating your Home</p><p class="text-right">140</p>
+         <p class="col-span-3">Generating a Random Starship</p><p class="text-right">143</p>
+         <p class="col-span-3">Ship Traits and Talents</p><p class="text-right">167</p>
+         <p class="col-span-3">Creating a Starbase or Station</p><p class="text-right">176</p>
+         <br/>
+         <p class="col-span-4 underline text-center">Chapter 5: Rules of Play</p>
+         <p class="col-span-3">Rules of Play</p><p class="text-right">180</p>
+         <p class="col-span-3">Values, Directives, and Focuses</p><p class="text-right">195</p>
+         <p class="col-span-3">Taking Action</p><p class="text-right">199</p>
+         <p class="col-span-3">Using your Ship</p><p class="text-right">211</p>
+         <p class="col-span-3">Modes of Play</p><p class="text-right">217</p>
+         <br/>
+         <p class="col-span-4 underline text-center">Chapter 6: Playing Captain's Log</p>
+         <p class="col-span-3">Launching your Mission</p><p class="text-right">226</p>
+         <p class="col-span-3">Constructing your Universe</p><p class="text-right">231</p>
+         <p class="col-span-3">The Journey</p><p class="text-right">234</p>
+         <p class="col-span-3">Storytelling Devices</p><p class="text-right">243</p>
+         <p class="col-span-3">The Fantastic Finale!</p><p class="text-right">248</p>
+         <p class="col-span-3">Closing Advice</p><p class="text-right">251</p>
+         <br/>
+         <p class="col-span-4 underline text-center">Appendix I: Probability Matrixes</p>
+         <p class="col-span-3">Generating Conflict</p><p class="text-right">254</p>
+         <p class="col-span-3">Generating Mission Types</p><p class="text-right">255</p>
+         <p class="col-span-3">Themes, Advantages, and Complicaitons</p><p class="text-right">267</p>
+         <p class="col-span-3">Encounters Probability Matrix</p><p class="text-right">270</p>
+         <p class="col-span-3">Momentum and Threat Spends</p><p class="text-right">275</p>
+         <br/>
+         <p class="col-span-4 underline text-center">Appendix II: Allies and Adversaries</p>
+         <p class="col-span-3">Generating Conflict</p><p class="text-right">282</p>
+         <p class="col-span-3">Beasts of the Galaxy Creation</p><p class="text-right">287</p>
+         <p class="col-span-3">Spaceborne Entity Creation</p><p class="text-right">290</p>
+         <br/>
+         <p class="col-span-4 underline text-center">Appendix III: Locations and Starships</p>
+         <p class="col-span-3">Strange New Worlds</p><p class="text-right">294</p>
+         <p class="col-span-3">Location</p><p class="text-right">302</p>
+         <p class="col-span-3">Ships and Stations</p><p class="text-right">308</p>
+         <br/>
+         <p class="col-span-4 underline text-center">Appendix IV: Additional Matrixes</p>
+         <p class="col-span-3">Additional Matrixes</p><p class="text-right">312</p>
+      </div>
+   </div>
+</div>

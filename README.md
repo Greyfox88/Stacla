@@ -15,14 +15,15 @@ Angular has been used just to be able to reach the widest possible audience over
 If you'd like to help feel free to get in touch. I've been in touch with the Modiphius amd they are happy with the project so long as it remains free and does not use assets from the source books. If you want to do translations check out the en.json file and make an equivalent and let me know.
 
 # Wishlist
-Translations
-Import/Export
-Drawing scenes/maps
-Adding more presets from all source books
-Chained Oracles (one click mission generation etc...)
-Factional theming (klingon/romulan looks etc...)
-Quick actions on Character/Asset lists (Change categories, quick delete...)
-Multiple Campaigns
+-Translations
+-Import/Export
+-Drawing scenes/maps
+-Adding more presets from all source books
+-~~Chained Oracles (one click mission generation etc...)~~
+-**Automatic Oracles has been removed in good faith to avoid potentially overstepping**
+-Factional theming (klingon/romulan looks etc...)
+-Quick actions on Character/Asset lists (Change categories, quick delete...)
+-Multiple Campaigns
 
 # Known Issues
 Formatting for various screen sizes needs reviewed

@@ -17,7 +17,6 @@ import { FormsModule } from '@angular/forms';
 })
 export class RollbarComponent implements OnInit, OnDestroy{
   rollerService = inject(RollerService)
-  private drawerShowing: Boolean = false;
   private drawer: DrawerInterface | undefined;
  
   ngOnDestroy(): void {
@@ -29,13 +28,7 @@ export class RollbarComponent implements OnInit, OnDestroy{
       placement: 'bottom',
       backdrop: false,
       bodyScrolling: true,
-      edge: true,
-      onHide: () => {
-        this.drawerShowing = false;
-      },
-      onShow: () => {
-        this.drawerShowing = true;
-      },
+      edge: true
     };
     const instanceOptions: InstanceOptions = {
       id: 'drawer-swipe',

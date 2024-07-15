@@ -10,21 +10,22 @@
       <span class="sr-only">Close menu</span>
    </button>
    <div class="grid grid-cols-1 gap-2">
-      <p class="col-span-1 text-center">Version 0.5</p>
+      <p class="col-span-1 text-center text-xl font-bold">Version 0.5.1</p>
       <button i18n class="btn btn-primary rounded-full" type="button" onclick="aboutModal.showModal()">About</button>
       <div class="divider divider-accent col-span-1 my-0"></div>
-      <p i18n class="col-span-1 text-center">Resources</p>
+      <p i18n class="col-span-1 text-center text-xl font-bold">Resources</p>
       <button class="btn btn-warning rounded-full" type="button" onclick=" window.open('https://modiphius.net/pages/star-trek-adventures','_blank')">Modiphius</button>
       <button class="btn btn-warning rounded-full" type="button" onclick=" window.open('https://sta.bcholmes.org/index.html','_blank')">Character Creator</button>
       <button class="btn btn-warning rounded-full" type="button" onclick=" window.open('https://continuingmissionsta.com/','_blank')">Continuing Mission</button>
       <button class="btn btn-warning rounded-full" type="button" onclick=" window.open('https://memory-alpha.fandom.com/','_blank')">Memory Alpha</button>
       <button class="btn btn-warning rounded-full" type="button" onclick=" window.open('https://www.reddit.com/r/startrekadventures/','_blank')">Star Trek Adventures Subreddit</button>
       <button class="btn btn-warning rounded-full" type="button" onclick=" window.open('https://www.reddit.com/r/Solo_Roleplaying/','_blank')">Solo Roleplaying Subreddit</button>
+      <button class="btn btn-warning rounded-full" type="button" onclick=" window.open('https://www.cygnus-x1.net/links/lcars/blueprints-main2.php','_blank')">Cygnus X-1 Blueprints</button>
       <div class="divider divider-accent col-span-1 my-0"></div>
-      <p i18n class="col-span-1 text-center">Data Operations</p>
+      <p i18n class="col-span-1 text-center text-xl font-bold">Data Operations</p>
       <button class="btn btn-success rounded-full" type="button" (click)="exportData()">Export Data</button>
       <button class="btn btn-warning rounded-full" type="button" onclick="importModal.showModal()">Import Data</button>
-      <button class="btn btn-error rounded-full" type="button" (click)="clearData()">Clear Data</button>
+      <button class="btn btn-error rounded-full" type="button" onclick="deleteModal.showModal()">Clear Data</button>
    </div>
 </div>
 
@@ -57,4 +58,17 @@
       </form>
     </div>
   </div>
+
+  <dialog id="deleteModal" class="modal modal-bottom sm:modal-middle">
+    <div class="modal-box">
+      <h3 i18n class="text-lg font-bold">Delete</h3>
+      <p i18n class="py-4">Are you sure you want to delete your data? You can export it first to back it up.</p>
+      <div class="modal-action">
+        <form method="dialog">
+          <button class="btn btn-sm btn-circle btn-ghost absolute right-2 top-2">✕</button>
+          <button i18n class="btn btn-primary">Close</button>
+          <button class="btn btn-error" (click)="clearData()">Delete</button>
+        </form>
+      </div>
+    </div>
 </dialog>

@@ -1,18 +1,18 @@
 import { ComponentFixture, TestBed } from '@angular/core/testing';
 
-import { OraclesComponent } from './oracles.component';
+import { ReferenceComponent } from './reference.component';
 
-describe('OraclesComponent', () => {
-  let component: OraclesComponent;
-  let fixture: ComponentFixture<OraclesComponent>;
+describe('ReferenceComponent', () => {
+  let component: ReferenceComponent;
+  let fixture: ComponentFixture<ReferenceComponent>;
 
   beforeEach(async () => {
     await TestBed.configureTestingModule({
-      imports: [OraclesComponent]
+      imports: [ReferenceComponent]
     })
     .compileComponents();
 
-    fixture = TestBed.createComponent(OraclesComponent);
+    fixture = TestBed.createComponent(ReferenceComponent);
     component = fixture.componentInstance;
     fixture.detectChanges();
   });

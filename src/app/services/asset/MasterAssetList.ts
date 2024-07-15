@@ -830,7 +830,7 @@ export class MasterAssetList{
           
             Era: "TOS",
             Faction: "Klingon Empire",
-            Type: "Ship",
+            Type: "Starship",
 
             Notes: "Stats from Core Rulebook"
         },
@@ -857,7 +857,7 @@ export class MasterAssetList{
           
             Era: "TOS",
             Faction: "Klingon Empire",
-            Type: "Ship",
+            Type: "Starship",
 
             Notes: "Stats from Core Rulebook"
         },
@@ -912,7 +912,7 @@ export class MasterAssetList{
           
             Era: "TNG",
             Faction: "Cardassian Union",
-            Type: "Ship",
+            Type: "Starship",
 
             Notes: "Stats from Core Rulebook"
         },
@@ -1713,7 +1713,7 @@ export class MasterAssetList{
           
             Era: "TNG",
             Faction: "Klingon Empire",
-            Type: "Ship",
+            Type: "Starship",
 
             Notes: "Stats from Core Rulebook"
         },
@@ -1740,7 +1740,7 @@ export class MasterAssetList{
           
             Era: "TNG",
             Faction: "Klingon Empire",
-            Type: "Ship",
+            Type: "Starship",
 
             Notes: "Stats from Core Rulebook"
         },
@@ -1767,7 +1767,7 @@ export class MasterAssetList{
           
             Era: "TNG",
             Faction: "Romulan Star Empire",
-            Type: "Ship",
+            Type: "Starship",
 
             Notes: "Stats from Core Rulebook"
         },
