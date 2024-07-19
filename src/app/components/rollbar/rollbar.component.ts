@@ -18,6 +18,7 @@ import { FormsModule } from '@angular/forms';
 export class RollbarComponent implements OnInit, OnDestroy{
   rollerService = inject(RollerService)
   private drawer: DrawerInterface | undefined;
+  expanded: boolean | undefined;
  
   ngOnDestroy(): void {
     this.rollerService.updatedRoller.unsubscribe();
@@ -37,7 +38,10 @@ export class RollbarComponent implements OnInit, OnDestroy{
     this.drawer = new Drawer($rollbar,options,instanceOptions);
     this.rollerService.updatedRoller.subscribe(x => {
       if(this.drawer!=undefined)
+      {
         this.drawer.show();
+        this.expanded = true;
+      }
     });
   }
 
@@ -59,5 +63,6 @@ export class RollbarComponent implements OnInit, OnDestroy{
   toggleRollbar()
   {
     this.drawer?.toggle();
+    this.expanded = this.drawer?.isVisible();
   }
 }

@@ -6,6 +6,7 @@ import { NavBarComponent } from './components/nav-bar/nav-bar.component';
 import { RollbarComponent } from './components/rollbar/rollbar.component';
 import { TranslateService } from '@ngx-translate/core';
 import { ReferenceComponent } from './components/reference/reference.component';
+import { BodyTabsComponent } from './components/body-tabs/body-tabs.component';
 
 @Component({
   selector: 'app-root',
@@ -15,7 +16,8 @@ import { ReferenceComponent } from './components/reference/reference.component';
     NavBarComponent,
     MenuComponent,
     ReferenceComponent,
-    RollbarComponent
+    RollbarComponent,
+    BodyTabsComponent
   ],
   templateUrl: './app.component.html',
   styleUrl: './app.component.scss'

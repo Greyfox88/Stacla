@@ -1,0 +1,14 @@
+<!--Tabs-->
+<div role="tablist" class="tabs tabs-lifted lcars-body flex-auto">
+    <input type="radio" name="NavTabs" role="tab" class="tab" attr.aria-label="{{'Campaign' | translate}}" checked/>
+    <div role="tabpanel" class="tab-content bg-base-100 border-base-300 p-6 flex-auto"><app-tab-campaign/></div>
+  
+    <input type="radio" name="NavTabs" role="tab" class="tab" attr.aria-label="{{'Log' | translate}}"  />
+    <div role="tabpanel" class="tab-content bg-base-100 border-base-300 p-6"><app-tab-log/></div>
+  
+    <input type="radio" name="NavTabs" role="tab" class="tab" attr.aria-label="{{'Characters' | translate}}" />
+    <div role="tabpanel" class="tab-content bg-base-100 border-base-300 p-6"><app-tab-characters/></div>
+  
+    <input type="radio" name="NavTabs" role="tab" class="tab" attr.aria-label="{{'Assets' | translate}}" />
+    <div role="tabpanel" class="tab-content bg-base-100 border-base-300 p-6"><app-tab-assets/></div>
+  </div>

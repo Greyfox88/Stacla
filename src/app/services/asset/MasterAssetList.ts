@@ -2,6 +2,84 @@ import { Asset } from '../database/database.service';
 
 export class MasterAssetList{
     public masterAssetList: Asset[] = [
+        {
+            Name: "Civillian Freighter",
+            Class: "Freighter",
+            Scale: 3,
+            Traits: "Freighter",
+            Talents: "Rugged Design",
+
+            SysComms: 7,
+            SysComputers: 7,
+            SysEngines: 7,
+            SysSensors: 8,
+            SysStructure: 9,
+            SysWeapons: 6,
+          
+            DeptCommand: 1,
+            DeptConn: 1,
+            DeptSecurity: 1,
+            DeptEngineering: 2,
+            DeptScience: 1,
+            DeptMedical: 2,  
+          
+            Faction: "Civillian",
+            Type: "Starship",
+
+            Notes: "Stats from Beta Quadrant Supplement"
+        },
+        {
+            Name: "Civillian Transport",
+            Class: "Transport",
+            Scale: 3,
+            Traits: "Transport",
+            Talents: "Improved Warp Drive",
+
+            SysComms: 6,
+            SysComputers: 6,
+            SysEngines: 8,
+            SysSensors: 7,
+            SysStructure: 7,
+            SysWeapons: 0,
+          
+            DeptCommand: 1,
+            DeptConn: 2,
+            DeptSecurity: 1,
+            DeptEngineering: 2,
+            DeptScience: 1,
+            DeptMedical: 2,  
+          
+            Faction: "Civillian",
+            Type: "Starship",
+
+            Notes: "Stats from Beta Quadrant Supplement"
+        },
+        {
+            Name: "Civillian Colony Ship",
+            Class: "Colony Ship",
+            Scale: 3,
+            Traits: "Colony Ship",
+            Talents: "Improved Warp Drive",
+
+            SysComms: 7,
+            SysComputers: 7,
+            SysEngines: 8,
+            SysSensors: 7,
+            SysStructure: 9,
+            SysWeapons: 0,
+          
+            DeptCommand: 1,
+            DeptConn: 1,
+            DeptSecurity: 1,
+            DeptEngineering: 2,
+            DeptScience: 2,
+            DeptMedical: 2,  
+          
+            Faction: "Civillian",
+            Type: "Starship",
+
+            Notes: "Stats from Beta Quadrant Supplement"
+        },
         //Enterprise Era - ENT
         {
             Name: "Federation Shuttlepod",
@@ -136,6 +214,87 @@ export class MasterAssetList{
             Type: "Starship",
 
             Notes: "Stats from Captain's Log Book"
+        },
+        {
+            Name: "Klingon Raptor Scout",
+            Class: "Raptor Class",
+            Scale: 3,
+            Traits: "Klingon Scout",
+            Talents: "Improved Reaction Control System\nAdvanced Sensor Suite",
+          
+            SysComms: 6,
+            SysComputers: 6,
+            SysEngines: 7,
+            SysSensors: 7,
+            SysStructure: 7,
+            SysWeapons: 6,
+          
+            DeptCommand: 1,
+            DeptConn: 4,
+            DeptSecurity: 2,
+            DeptEngineering: 1,
+            DeptScience: 1,
+            DeptMedical: 1,  
+          
+            Era: "ENT",
+            Faction: "Klingon Empire",
+            Type: "Starship",
+
+            Notes: "Stats from Beta Quadrant Supplement"
+        },
+        {
+            Name: "Klingon D5 Class",
+            Class: "D5 Class",
+            Scale: 3,
+            Traits: "Klingon Battle Cruiser",
+            Talents: "Improved Warp Drive\nImproved Hull Integrity",
+          
+            SysComms: 6,
+            SysComputers: 7,
+            SysEngines: 7,
+            SysSensors: 6,
+            SysStructure: 7,
+            SysWeapons: 8,
+          
+            DeptCommand: 1,
+            DeptConn: 2,
+            DeptSecurity: 2,
+            DeptEngineering: 2,
+            DeptScience: 1,
+            DeptMedical: 1,  
+          
+            Era: "ENT",
+            Faction: "Klingon Empire",
+            Type: "Starship",
+
+            Notes: "Stats from Beta Quadrant Supplement"
+        },
+        {
+            Name: "Romulan Bird of Prey",
+            Class: "Bird of Prey",
+            Scale: 3,
+            Traits: "Romulan Scout",
+            Talents: "Cloaking Device\nBackup EPS Conduits",
+          
+            SysComms: 6,
+            SysComputers: 6,
+            SysEngines: 9,
+            SysSensors: 8,
+            SysStructure: 6,
+            SysWeapons: 8,
+          
+            DeptCommand: 3,
+            DeptConn: 2,
+            DeptSecurity: 1,
+            DeptEngineering: 2,
+            DeptScience: 1,
+            DeptMedical: 1,  
+          
+            Era: "ENT",
+            Faction: "Romulan Star Empire",
+            Type: "Starship",
+
+            Notes: "Stats from Beta Quadrant Supplement"
         },
 
         //The Original Series Era - TOS
@@ -1743,6 +1902,87 @@ export class MasterAssetList{
             Type: "Starship",
 
             Notes: "Stats from Core Rulebook"
+        },
+        {
+            Name: "Klingon K'Tinga Battle Cruiser",
+            Class: "K'Tinga Battle Cruiser",
+            Scale: 4,
+            Traits: "Klingon Battle Cruiser",
+            Talents: "Command Ship\nCloaking Device",
+          
+            SysComms: 8,
+            SysComputers: 7,
+            SysEngines: 9,
+            SysSensors: 7,
+            SysStructure: 9,
+            SysWeapons: 9,
+          
+            DeptCommand: 4,
+            DeptConn: 2,
+            DeptSecurity: 3,
+            DeptEngineering: 1,
+            DeptScience: 1,
+            DeptMedical: 1,  
+          
+            Era: "TNG",
+            Faction: "Klingon Empire",
+            Type: "Starship",
+
+            Notes: "Stats from Beta Quadrant Supplement"
+        },
+        {
+            Name: "Klingon Negh'Var Warship",
+            Class: "Negh'Var Warship",
+            Scale: 6,
+            Traits: "Klingon Warship",
+            Talents: "Cloaking Device\nFast Targeting Systems\nSecondary Reactors\nExtensive Shuttlebays\nImproved Hull Integrity\nCommand Ship",
+          
+            SysComms: 9,
+            SysComputers: 10,
+            SysEngines: 10,
+            SysSensors: 9,
+            SysStructure: 10,
+            SysWeapons: 12,
+          
+            DeptCommand: 3,
+            DeptConn: 2,
+            DeptSecurity: 4,
+            DeptEngineering: 2,
+            DeptScience: 1,
+            DeptMedical: 2,  
+          
+            Era: "TNG",
+            Faction: "Klingon Empire",
+            Type: "Starship",
+
+            Notes: "Stats from Beta Quadrant Supplement"
+        },
+        {
+            Name: "Romulan Scout Ship",
+            Class: "Scout Ship",
+            Scale: 3,
+            Traits: "Romulan Scout Ship",
+            Talents: "Cloaking Device\nHigh Resolution Sensors",
+          
+            SysComms: 7,
+            SysComputers: 7,
+            SysEngines: 9,
+            SysSensors: 8,
+            SysStructure: 7,
+            SysWeapons: 7,
+          
+            DeptCommand: 1,
+            DeptConn: 3,
+            DeptSecurity: 1,
+            DeptEngineering: 1,
+            DeptScience: 2,
+            DeptMedical: 1,  
+          
+            Era: "TNG",
+            Faction: "Romulan Star Empire",
+            Type: "Starship",
+
+            Notes: "Stats from Beta Quadrant Supplement"
         },
         {
             Name: "Romulan D'Deridex Class Warbird",

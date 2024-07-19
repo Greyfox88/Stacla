@@ -5,3 +5,50 @@
 
 app-root {   z-index: 1; }  
 app-toast, .toast-class {   z-index: 2; }
+
+.lcars {
+    background-color: black;
+
+    h1 {
+        font-weight: 600;
+        font-size:xx-large;
+        color: orange;
+        height: 60px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        padding: 10px;        
+    }
+}
+
+.lcars-title-bar{
+    padding: 0%;
+    background-color: orange;
+    height: 60px;
+    min-height: 60px;
+
+    h1 {
+        font-weight: 600;
+        font-size:xx-large;
+        color: orange;
+        height: 60px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        padding: 10px;  
+    }
+}
+
+.lcars-body{
+    padding: 10px;
+}
+
+.lcars-pane-left {
+    border-color: transparent orange transparent transparent;
+    border-width: 2px;
+}
+
+.lcars-pane-right {
+    border-color: transparent transparent transparent orange;
+    border-width: 2px;
+}

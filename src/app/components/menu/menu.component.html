@@ -1,5 +1,5 @@
 <!-- drawer component -->
-<div id="drawer-menu" class="fixed top-0 left-0 z-40 h-screen p-4 overflow-y-auto transition-transform -translate-x-full bg-neutral text-neutral-content w-80" tabindex="-1" aria-labelledby="drawer-menu-label">
+<div id="drawer-menu" class="fixed top-0 left-0 z-40 h-screen p-4 overflow-y-auto transition-transform -translate-x-full bg-neutral text-neutral-content w-80 lcars-pane-left" tabindex="-1" aria-labelledby="drawer-menu-label">
     <h5 id="drawer-menu-label" class="inline-flex items-center mb-4 font-semibold"><svg class="w-4 h-4 me-2.5" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="currentColor" viewBox="0 0 20 20">
     <path d="M10 .5a9.5 9.5 0 1 0 9.5 9.5A9.51 9.51 0 0 0 10 .5ZM9.5 4a1.5 1.5 0 1 1 0 3 1.5 1.5 0 0 1 0-3ZM12 15H8a1 1 0 0 1 0-2h1v-3H8a1 1 0 0 1 0-2h2a1 1 0 0 1 1 1v4h1a1 1 0 0 1 0 2Z"/>
   </svg>{{'Menu' | translate}}</h5>
@@ -10,7 +10,8 @@
       <span class="sr-only">Close menu</span>
    </button>
    <div class="grid grid-cols-1 gap-2">
-      <p class="col-span-1 text-center text-xl font-bold">Version 0.5.1</p>
+      <p class="col-span-1 text-center text-xl font-bold">Version 0.6</p>
+      <button i18n class="btn btn-primary rounded-full" type="button" onclick="versionModal.showModal()">Verion History</button>
       <button i18n class="btn btn-primary rounded-full" type="button" onclick="aboutModal.showModal()">About</button>
       <div class="divider divider-accent col-span-1 my-0"></div>
       <p i18n class="col-span-1 text-center text-xl font-bold">Resources</p>
@@ -34,7 +35,8 @@
      <h3 i18n class="text-lg font-bold">About</h3>
      <p i18n class="py-4">Hello! Thank you for trying out my Star Trek Adventures Captain's Log Assistant (Sta'Cla!)</p>
      <p i18n class="py-4">This app is designed to try reduce the work involved in running your captain's log adventures to spend less time working out the mechanics and more time playing.</p>
-     <p i18n class="py-4">If you find any issues or would be interested getting involved in making it better, feel free to drop by the <a href="https://github.com/Greyfox88/Stacla" target="_blank" rel="noopener noreferrer" style="text-decoration: underline;">GitHub Repo</a></p>
+     <p i18n class="py-4">If you find any issues or would be interested getting involved in making it better, feel free to drop by the <a href="https://github.com/Greyfox88/Stacla" target="_blank" rel="noopener noreferrer" style="text-decoration: underline;">GitHub Repo</a>. You can also find me on reddit as u/GreyScot88</p>
+     <p i18n class="py-4">I'm normally a backend guy anyone wanna play with the front end let me know, also wouldnt mind some help creating preset characters and ships as I want to avoid just copying official resources.</p>
      <div class="modal-action">
        <form method="dialog">
          <!-- if there is a button in form, it will close the modal -->
@@ -44,6 +46,20 @@
      </div>
    </div>
  </dialog>
+
+ <dialog id="versionModal" class="modal modal-bottom sm:modal-middle">
+  <div class="modal-box">
+    <h3 i18n class="text-lg font-bold">Version History</h3>
+    <p i18n class="py-4">Version 0.6 - Initial LCARS theming, Language selector hidden until other languages implemented</p>
+    <div class="modal-action">
+      <form method="dialog">
+        <!-- if there is a button in form, it will close the modal -->
+        <button class="btn btn-sm btn-circle btn-ghost absolute right-2 top-2">✕</button>
+        <button i18n class="btn">Close</button>
+      </form>
+    </div>
+  </div>
+</dialog>
 
  <dialog id="importModal" class="modal modal-bottom sm:modal-middle">
   <div class="modal-box">
