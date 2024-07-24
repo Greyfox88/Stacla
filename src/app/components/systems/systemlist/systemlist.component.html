@@ -1,0 +1,16 @@
+<div class="grid grid-cols-1 gap-2">
+    @for(system of systemList; track system)
+    {
+        @if(system!=undefined)
+        {
+            <button class="btn btn-primary rounded-full max-w-96" type="button" (click)="focusSystem(system.Id)">{{ system.Name }}</button>
+            @if(focusedSystemId==system.Id)
+            {
+                <div class="divider"></div>
+                <app-system (systemUpdatedEvent)="refreshSystems()" [systemId]="system.Id"/>  
+                <div class="divider"></div> 
+            }
+            
+        }    
+    }   
+</div>

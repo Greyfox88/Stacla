@@ -1,0 +1,164 @@
+<div class="grid grid-cols-2 gap-2">
+  <label class="form-control w-full max-w-xs">
+    <div class="label">
+      <span i18n class="label-text">Name</span>
+    </div>
+    <input type="text" [(ngModel)]="currentSystem.Name" class="input input-bordered w-full max-w-xs" />
+  </label>
+
+  <label class="form-control w-full max-w-xs">
+    <div class="label">
+      <span i18n class="label-text">Class</span>
+    </div>
+    <input type="text" [(ngModel)]="currentSystem.Class" class="input input-bordered w-full max-w-xs" />
+  </label>
+</div>
+<br/>
+
+<div class="opening hide-UI view-3D zoom-close" style="background-color: black !important; height: 200px; font-size: 10px;">
+  <div id="universe" class="scale-stretched set-size">
+    <div id="galaxy">
+      <div id="solar-system" class="sun">
+        <div id="mercury" class="orbit">
+          <div class="pos">
+            <div class="planet">
+              <dl class="infos">
+                <dt>Mercury</dt>
+                <dd><span></span></dd>
+              </dl>
+            </div>
+          </div>
+        </div>
+        <div id="venus" class="orbit">
+          <div class="pos">
+            <div class="planet">
+              <dl class="infos">
+                <dt>Venus</dt>
+                <dd><span></span></dd>
+              </dl>
+            </div>
+          </div>
+        </div>
+        <div id="earth" class="orbit">
+          <div class="pos">
+            <div class="orbit">
+              <div class="pos">
+                <div class="moon"></div>
+              </div>
+            </div>
+            <div class="planet">
+              <dl class="infos">
+                <dt>Earth</dt>
+                <dd><span></span></dd>
+              </dl>
+            </div>
+          </div>
+        </div>
+        <div id="mars" class="orbit">
+          <div class="pos">
+            <div class="planet">
+              <dl class="infos">
+                <dt>Mars</dt>
+                <dd><span></span></dd>
+              </dl>
+            </div>
+          </div>
+        </div>
+        <div id="jupiter" class="orbit">
+          <div class="pos">
+            <div class="planet">
+              <dl class="infos">
+                <dt>Jupiter</dt>
+                <dd><span></span></dd>
+              </dl>
+            </div>
+          </div>
+        </div>
+        <div id="saturn" class="orbit">
+          <div class="pos">
+            <div class="planet">
+              <div class="ring"></div>
+              <dl class="infos">
+                <dt>Saturn</dt>
+                <dd><span></span></dd>
+              </dl>
+            </div>
+          </div>
+        </div>
+        <div id="uranus" class="orbit">
+          <div class="pos">
+            <div class="planet">
+              <dl class="infos">
+                <dt>Uranus</dt>
+                <dd><span></span></dd>
+              </dl>
+            </div>
+          </div>
+        </div>
+        <div id="neptune" class="orbit">
+          <div class="pos">
+            <div class="planet">
+              <dl class="infos">
+                <dt>Neptune</dt>
+                <dd><span></span></dd>
+              </dl>
+            </div>
+          </div>
+        </div>
+        <div id="sun">
+          <dl class="infos">
+            <dt>Sun</dt>
+            <dd><span></span></dd>
+          </dl>
+        </div>
+      </div>
+    </div>
+  </div>
+  <script src="//ajax.googleapis.com/ajax/libs/jquery/1.8.1/jquery.min.js"></script>
+  <script type="text/javascript">
+  if (typeof jQuery == 'undefined') { 
+    document.write(unescape("%3Cscript src='js/jquery.min.js' type='text/javascript'%3E%3C/script%3E"));
+  }
+  </script>
+  <script src="js/prefixfree.min.js"></script>
+  <script src="js/scripts.min.js"></script>
+</div>
+
+<div class="grid grid-cols-1 gap-2">
+    <br/>
+    <button i18n class="btn btn-warning join-item rounded-full flex-initial w-48 mx-2" (click)="addPlanet()">{{'Add Planet' | translate}}</button>
+    <br/>
+  
+    <div class="grid grid-cols-1 gap-2">
+      @for(planet of currentSystem.Planets; track planet)
+      {
+        @if(planet!=undefined)
+        {
+          <button class="btn btn-primary rounded-full max-w-96" type="button" (click)="focusPlanet(planet.Id)">{{ planet.Name }}</button>
+          @if(focusedPlanetId==planet.Id)
+          {
+              <div class="divider"></div>
+              <app-planet [planetId]="planet.Id"/>  
+              <div class="divider"></div> 
+          } 
+        }  
+      }   
+  </div>
+</div>
+
+<div class="col-span-1">
+  <label>  
+    <div class="label w-full">
+        <span i18n class="label-text">{{'System Notes' | translate}}</span>
+      </div>
+  </label>
+  <div class="NgxEditor__Wrapper w-full">
+    <ngx-editor-menu [editor]="editor"> </ngx-editor-menu>
+    <ngx-editor [(ngModel)]="currentSystem.Notes" [editor]="editor"></ngx-editor>
+  </div>
+</div>
+<br/>
+  <div class="flex">
+    <button i18n class="btn btn-error join-item rounded-full flex-initial w-48 mx-2" (click)="delete()">{{'Delete System' | translate}}</button>
+    <button i18n class="btn btn-warning join-item rounded-full flex-initial w-48 mx-2" (click)="save()">{{'Save System' | translate}}</button>
+</div>

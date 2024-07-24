@@ -4,6 +4,7 @@ import { TabCharactersComponent } from '../characters/tab-characters/tab-charact
 import { TabAssetsComponent } from '../assets/tab-assets/tab-assets.component';
 import { TabLogComponent } from '../logs/tab-log/tab-log.component';
 import { TranslateModule } from '@ngx-translate/core';
+import { TabSystemsComponent } from '../systems/tab-systems/tab-systems.component';
 
 @Component({
   selector: 'app-body-tabs',
@@ -12,6 +13,7 @@ import { TranslateModule } from '@ngx-translate/core';
     TabLogComponent,
     TabCharactersComponent,
     TabAssetsComponent,
+    TabSystemsComponent,
     TranslateModule
   ],
   templateUrl: './body-tabs.component.html',

@@ -1,0 +1,11 @@
+<div class="grid grid-cols-1 gap-2">
+    <div class="flex">
+      <button i18n class="btn btn-warning join-item rounded-full flex-1 max-w-40" (click)="newSystem()">New System</button>
+    </div>
+  
+    <!--Tabs-->
+    <div role="systemtablist" class="tabs tabs-lifted">
+        <input type="radio" name="SystemTabs" role="tab" class="tab" aria-label="All" checked/>
+        <div role="tabpanel" class="tab-content bg-base-100 border-base-300 rounded-box p-6"><app-systemlist/></div>
+    </div>
+</div>

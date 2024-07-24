@@ -94,28 +94,50 @@ export interface Asset extends CampaignObject {
   Type?: string;
 }
 
+//Systems
+export interface System extends CampaignObject {
+  Id?: number;
+  Name: string;
+  Class: string;
+
+  Notes?: string;
+}
+
+export interface Planet extends CampaignObject {
+  Id?: number;
+  SystemId?: number;
+  Name: string;
+  Class: string;
+
+  Notes?: string;
+}
+
 @Injectable({
   providedIn: 'root'
 })
 
 export class DatabaseService extends Dexie {
-  private ShipAssetType = 1;
   Campaigns!: Table<Campaign, number>;
   Logs!: Table<Log, number>;
   Characters!: Table<Character, number>;
   Assets!: Table<Asset, number>;
+  Systems!: Table<System, number>;
+  Planets!: Table<Planet, number>;
 
 
   constructor() {
     super('Stacla');
-    this.version(1).stores({
+    this.version(2).stores({
         Campaigns: '++Id',
         Logs: '++Id,CampaignId',
         Characters: '++Id,CampaignId',
-        Assets: '++Id,CampaignId,Type'
+        Assets: '++Id,CampaignId,Type',
+        Systems: '++Id,CampaignId',
+        Planets: '++Id,CampaignId,SystemId'
     });
   }
 
+  //CAMPAIGNS
   getCampaign(campaignId: number): Promise<Campaign|undefined> {
     return this.Campaigns.get({Id: campaignId});
   }
@@ -124,6 +146,7 @@ export class DatabaseService extends Dexie {
     this.Campaigns.put(campaign);
   }
 
+  //LOGS
   getLog(logId: number): Promise<Log|undefined>{
     return this.Logs.get({Id:logId});
   }
@@ -140,6 +163,7 @@ export class DatabaseService extends Dexie {
     return this.Logs.where({CampaignId: campaignId}).toArray();
   }
 
+  //CHARACTERS
   getCharacter(characterId: number): Promise<Character|undefined> {
     return this.Characters.get({Id: characterId});
   }
@@ -157,6 +181,7 @@ export class DatabaseService extends Dexie {
     return this.Characters.where({CampaignId: campaignId}).toArray();
   }
 
+  //ASSETS
   getAsset(assetId: number): Promise<Asset|undefined> {
     return this.Assets.get({Id: assetId})
   }
@@ -173,6 +198,48 @@ export class DatabaseService extends Dexie {
     return this.Assets.where({CampaignId: campaignId}).toArray();
   }
 
+  //SYSTEMS
+  getSystem(assetId: number): Promise<System|undefined> {
+    return this.Systems.get({Id: assetId})
+  }
+
+  putSystem(system: System){
+    this.Systems.put(system);
+  }
+
+  deleteSystem(assetId: number){
+    this.Systems.delete(assetId);
+  }
+
+  getSystems(campaignId: number): Promise<System[]|undefined[]> {
+    return this.Systems.where({CampaignId: campaignId}).toArray();
+  }
+
+  //PLANETS
+  getPlanet(planetId: number): Promise<Planet|undefined> {
+    return this.Planets.get({Id: planetId})
+  }
+
+  putPlanet(planet: Planet){
+    this.Planets.put(planet);
+  }
+
+  deletePlanet(planetId: number){
+    this.Planets.delete(planetId);
+  }
+
+  deletePlanets(systemId: number){
+    this.Planets.where("SystemId").equals(systemId).delete();
+  }
+
+  getPlanets(systemId: number | undefined): Promise<Planet[]|undefined[]> {
+    if(systemId==undefined)
+      return this.Planets.toArray();
+    else
+      return this.Planets.where({SystemId: systemId}).toArray();    
+  }
+
+  //UTILITES
   importFiles(blob: Blob){
     this.clearData(false);
     importDB(blob).then(x => {

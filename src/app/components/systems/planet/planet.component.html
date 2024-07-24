@@ -1,0 +1,32 @@
+<div class="grid grid-cols-2 gap-2">
+    <label class="form-control w-full max-w-xs">
+    <div class="label">
+        <span i18n class="label-text">Name</span>
+    </div>
+    <input type="text" [(ngModel)]="currentPlanet.Name" class="input input-bordered w-full max-w-xs" />
+    </label>
+
+    <label class="form-control w-full max-w-xs">
+    <div class="label">
+        <span i18n class="label-text">Class</span>
+    </div>
+    <input type="text" [(ngModel)]="currentPlanet.Class" class="input input-bordered w-full max-w-xs" />
+    </label>
+</div>
+<br/>
+<div class="col-span-1">
+    <label>  
+      <div class="label w-full">
+          <span i18n class="label-text">{{'Planet Notes' | translate}}</span>
+        </div>
+    </label>
+    <div class="NgxEditor__Wrapper w-full">
+      <ngx-editor-menu [editor]="editor"> </ngx-editor-menu>
+      <ngx-editor [(ngModel)]="currentPlanet.Notes" [editor]="editor"></ngx-editor>
+    </div>
+  </div>
+  <br/>
+    <div class="flex">
+      <button i18n class="btn btn-error join-item rounded-full flex-initial w-48 mx-2" (click)="deletePlanet()">{{'Delete Planet' | translate}}</button>
+      <button i18n class="btn btn-warning join-item rounded-full flex-initial w-48 mx-2" (click)="savePlanet()">{{'Save Planet' | translate}}</button>
+</div>
