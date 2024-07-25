@@ -1,6 +1,6 @@
 {
   "configVersion": 1,
-  "timestamp": 1721897354304,
+  "timestamp": 1721897470711,
   "index": "/index.html",
   "assetGroups": [
     {
@@ -52,7 +52,7 @@
     "/assets/screenshots/Desktop.png": "035ce3d03fef28406f4966f25f7d710a837e44a5",
     "/assets/screenshots/Mobile.png": "6f03036ecf3b79de34011990880c6c165c9e85d0",
     "/favicon.ico": "9c39f434fe1261f68c5e3eefdf734630d99c5670",
-    "/index.html": "d7f98c60e1ccda1655bf49d1325051b9e4496233",
+    "/index.html": "8c2de74262c70dab28d5853d9da62b63e518b3c5",
     "/main-6REKEIJ6.js": "5e7089a09dfab166bfb6e43ece7b424d62e18cef",
     "/polyfills-N6LQB2YD.js": "52a57fff1bfa58a16f07a379b0cecf9fd01868e2",
     "/styles-6OGQCDU5.css": "d0932ccd937f99d6e7ef136be9e490c59170a794"
