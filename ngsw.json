@@ -1,7 +1,7 @@
 {
   "configVersion": 1,
-  "timestamp": 1721896926759,
-  "index": "/Stacla/index.html",
+  "timestamp": 1721897126989,
+  "index": "/index.html",
   "assetGroups": [
     {
       "name": "app",
@@ -11,11 +11,11 @@
         "ignoreVary": true
       },
       "urls": [
-        "/Stacla/favicon.ico",
-        "/Stacla/index.html",
-        "/Stacla/main-6REKEIJ6.js",
-        "/Stacla/polyfills-N6LQB2YD.js",
-        "/Stacla/styles-6OGQCDU5.css"
+        "/favicon.ico",
+        "/index.html",
+        "/main-6REKEIJ6.js",
+        "/polyfills-N6LQB2YD.js",
+        "/styles-6OGQCDU5.css"
       ],
       "patterns": []
     },
@@ -27,35 +27,35 @@
         "ignoreVary": true
       },
       "urls": [
-        "/Stacla/assets/icons/android-chrome-192x192.png",
-        "/Stacla/assets/icons/android-chrome-512x512.png",
-        "/Stacla/assets/icons/apple-touch-icon.png",
-        "/Stacla/assets/icons/favicon-16x16.png",
-        "/Stacla/assets/icons/favicon-32x32.png",
-        "/Stacla/assets/icons/mstile-150x150.png",
-        "/Stacla/assets/icons/safari-pinned-tab.svg",
-        "/Stacla/assets/screenshots/Desktop.png",
-        "/Stacla/assets/screenshots/Mobile.png"
+        "/assets/icons/android-chrome-192x192.png",
+        "/assets/icons/android-chrome-512x512.png",
+        "/assets/icons/apple-touch-icon.png",
+        "/assets/icons/favicon-16x16.png",
+        "/assets/icons/favicon-32x32.png",
+        "/assets/icons/mstile-150x150.png",
+        "/assets/icons/safari-pinned-tab.svg",
+        "/assets/screenshots/Desktop.png",
+        "/assets/screenshots/Mobile.png"
       ],
       "patterns": []
     }
   ],
   "dataGroups": [],
   "hashTable": {
-    "/Stacla/assets/icons/android-chrome-192x192.png": "fc0775862b18f713bdb630eb1d5473da944ab3bb",
-    "/Stacla/assets/icons/android-chrome-512x512.png": "aa42cf69de10041b972246fb81b2c130816b5fe2",
-    "/Stacla/assets/icons/apple-touch-icon.png": "d0ba78a2f5a1929657ab378fccd946c1dfdf60c4",
-    "/Stacla/assets/icons/favicon-16x16.png": "287d69c605f90b1bcde24f8e9a16ed0f251f4a7d",
-    "/Stacla/assets/icons/favicon-32x32.png": "ee312139dc271ffa1dabb6b11312ef84c39b27a2",
-    "/Stacla/assets/icons/mstile-150x150.png": "2d88843abfe66eea743728e36bd228533cdbe108",
-    "/Stacla/assets/icons/safari-pinned-tab.svg": "0fc6fcf3a2a1b81f1799c63fcb566c5d17ad17ee",
-    "/Stacla/assets/screenshots/Desktop.png": "035ce3d03fef28406f4966f25f7d710a837e44a5",
-    "/Stacla/assets/screenshots/Mobile.png": "6f03036ecf3b79de34011990880c6c165c9e85d0",
-    "/Stacla/favicon.ico": "9c39f434fe1261f68c5e3eefdf734630d99c5670",
-    "/Stacla/index.html": "8c2de74262c70dab28d5853d9da62b63e518b3c5",
-    "/Stacla/main-6REKEIJ6.js": "5e7089a09dfab166bfb6e43ece7b424d62e18cef",
-    "/Stacla/polyfills-N6LQB2YD.js": "52a57fff1bfa58a16f07a379b0cecf9fd01868e2",
-    "/Stacla/styles-6OGQCDU5.css": "d0932ccd937f99d6e7ef136be9e490c59170a794"
+    "/assets/icons/android-chrome-192x192.png": "fc0775862b18f713bdb630eb1d5473da944ab3bb",
+    "/assets/icons/android-chrome-512x512.png": "aa42cf69de10041b972246fb81b2c130816b5fe2",
+    "/assets/icons/apple-touch-icon.png": "d0ba78a2f5a1929657ab378fccd946c1dfdf60c4",
+    "/assets/icons/favicon-16x16.png": "287d69c605f90b1bcde24f8e9a16ed0f251f4a7d",
+    "/assets/icons/favicon-32x32.png": "ee312139dc271ffa1dabb6b11312ef84c39b27a2",
+    "/assets/icons/mstile-150x150.png": "2d88843abfe66eea743728e36bd228533cdbe108",
+    "/assets/icons/safari-pinned-tab.svg": "0fc6fcf3a2a1b81f1799c63fcb566c5d17ad17ee",
+    "/assets/screenshots/Desktop.png": "035ce3d03fef28406f4966f25f7d710a837e44a5",
+    "/assets/screenshots/Mobile.png": "6f03036ecf3b79de34011990880c6c165c9e85d0",
+    "/favicon.ico": "9c39f434fe1261f68c5e3eefdf734630d99c5670",
+    "/index.html": "d7f98c60e1ccda1655bf49d1325051b9e4496233",
+    "/main-6REKEIJ6.js": "5e7089a09dfab166bfb6e43ece7b424d62e18cef",
+    "/polyfills-N6LQB2YD.js": "52a57fff1bfa58a16f07a379b0cecf9fd01868e2",
+    "/styles-6OGQCDU5.css": "d0932ccd937f99d6e7ef136be9e490c59170a794"
   },
   "navigationUrls": [
     {
