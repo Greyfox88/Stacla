@@ -4,6 +4,7 @@ import { FormsModule } from '@angular/forms';
 import { Editor, NgxEditorModule } from 'ngx-editor';
 import { TranslateModule } from '@ngx-translate/core';
 import { PlanetComponent } from '../planet/planet.component';
+import { Planet } from '../../../services/database/database.service';
 
 @Component({
   selector: 'app-system',
@@ -31,18 +32,13 @@ export class SystemComponent implements OnInit, OnDestroy{
   editor: Editor = new Editor;
 
   ngOnInit(): void {
-    let $orrery = document.getElementById('orrery');
-    let $universe = document.getElementById('universe');
-    let $solarsys = document.getElementById('solar-system');
-
     if(this.systemId!=undefined)
     {
       this.systemService.getSystemModel(this.systemId).then(result =>{
         if(result != undefined)
         {
           this.currentSystem = result;
-        }
-          
+        }          
       }
       );
     }
@@ -73,5 +69,15 @@ export class SystemComponent implements OnInit, OnDestroy{
       this.focusedPlanetId = undefined;
     else
       this.focusedPlanetId = planetId;
+  }
+
+  getOrbitStyle(planet: Planet){
+    let spacing: number = 175/this.currentSystem.Planets.length;
+    let index: number = this.currentSystem.Planets.indexOf(planet)+1;
+    let orbitValue: number = (index*spacing)+32;
+    console.log(orbitValue);
+    let orbitMargin: number = orbitValue/2;
+    let styleString =`width: ${orbitValue}em; height: ${orbitValue}em; margin-top: -${orbitMargin}em; margin-left: -${orbitMargin}em`;
+    return styleString;
   }
 }
