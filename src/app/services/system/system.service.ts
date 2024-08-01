@@ -79,5 +79,5 @@ export class SystemService {
 }
 
 export interface SystemModel extends System {
-  Planets: Planet[] | undefined[];
+  Planets: Planet[] | any[];
 }
