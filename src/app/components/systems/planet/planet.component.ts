@@ -21,9 +21,10 @@ export class PlanetComponent implements OnInit, OnDestroy{
   @Input() planetId: number | undefined;
   @Output() planetUpdatedEvent = new EventEmitter();
   currentPlanet: Planet = {
-    Name: "New Planet",    
-    Class: "Unknown",
-    Seed: Math.random()*1000
+    Name: '',
+    Class: '',
+    Ringed: false,
+    Size: 0
   }
   editor: Editor = new Editor;
 
@@ -35,7 +36,7 @@ export class PlanetComponent implements OnInit, OnDestroy{
         {
           this.currentPlanet = result;
           this.planetId = this.currentPlanet.Id;
-        }          
+        }       
       }
       );
     }
@@ -47,7 +48,8 @@ export class PlanetComponent implements OnInit, OnDestroy{
   }
 
   savePlanet(){
-    this.systemService.putPlanet(this.currentPlanet);
+    if(this.currentPlanet!=undefined)
+      this.systemService.putPlanet(this.currentPlanet);
   }
 
   deletePlanet(){

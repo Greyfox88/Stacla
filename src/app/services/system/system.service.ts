@@ -25,12 +25,15 @@ export class SystemService {
   }
 
   newPlanet(systemId:number):void {
+    let seed = Math.random()*1000;
     this.database.putPlanet({
       CampaignId: this.campaignId,
       SystemId: systemId,
       Name: 'New Planet',
       Class: 'Unknown',
-      Seed: Math.random()*1000
+      Seed: seed,
+      Ringed: seed > 750,
+      Size: 10
     })
     this.refreshSystems();
   }

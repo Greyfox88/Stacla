@@ -24,6 +24,9 @@
           <div id="mercury" class="orbit" [style]="getOrbitStyle(planet)">
             <div class="pos">
               <div class="planet" [style]="getPlanetStyle(planet)">
+                @if(planet?.Ringed){
+                  <div class="ring" [style]="getRingStyle(planet.Size)"></div>
+                }
                 <dl class="infos">
                   <dt>{{planet?.Name}}</dt>
                   <dd><span></span></dd>
@@ -69,7 +72,7 @@
               <div class="divider"></div> 
           } 
         }  
-      }   
+      }  
   </div>
 </div>
 

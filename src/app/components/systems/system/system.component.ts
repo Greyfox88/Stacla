@@ -91,7 +91,13 @@ export class SystemComponent implements OnInit, OnDestroy{
     if(size<1.5)
       size = 1.5;
     let styleString =`font-size: ${size}em`;
-    console.log(styleString);
+    return styleString;
+  }
+
+  getRingStyle(size:number){
+    let ringSize = size/5;
+    let ringMargin = size/10;
+    let styleString = `width: ${ringSize}em; height: ${ringSize}em; margin-top: -${ringMargin}em; margin-left: -${ringMargin}em; border: 0.3em solid rgba(160, 147, 130, 0.7);`
     return styleString;
   }
 }

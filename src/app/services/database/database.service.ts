@@ -110,6 +110,10 @@ export interface Planet extends CampaignObject {
   Class: string;
   Seed?: number;
 
+  Size: number;
+  Ringed: boolean;
+
+
   Notes?: string;
 }
 
