@@ -72,12 +72,26 @@ export class SystemComponent implements OnInit, OnDestroy{
   }
 
   getOrbitStyle(planet: Planet){
+    //175 is a bit of a magic number at the moment just to try keep it all on screen
     let spacing: number = 175/this.currentSystem.Planets.length;
     let index: number = this.currentSystem.Planets.indexOf(planet)+1;
     let orbitValue: number = (index*spacing)+32;
-    console.log(orbitValue);
     let orbitMargin: number = orbitValue/2;
     let styleString =`width: ${orbitValue}em; height: ${orbitValue}em; margin-top: -${orbitMargin}em; margin-left: -${orbitMargin}em`;
+    return styleString;
+  }
+
+  getPlanetStyle(planet: Planet){
+    let size: number = 15;
+    if(planet.Seed!=undefined)
+      size = planet.Seed/100;
+    let maxSize: number = 30/this.currentSystem.Planets.length;
+    if(size>maxSize)
+      size=maxSize;
+    if(size<1.5)
+      size = 1.5;
+    let styleString =`font-size: ${size}em`;
+    console.log(styleString);
     return styleString;
   }
 }

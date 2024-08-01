@@ -23,7 +23,7 @@
         {
           <div id="mercury" class="orbit" [style]="getOrbitStyle(planet)">
             <div class="pos">
-              <div class="planet">
+              <div class="planet" [style]="getPlanetStyle(planet)">
                 <dl class="infos">
                   <dt>{{planet?.Name}}</dt>
                   <dd><span></span></dd>

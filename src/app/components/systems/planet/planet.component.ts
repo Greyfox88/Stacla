@@ -22,7 +22,8 @@ export class PlanetComponent implements OnInit, OnDestroy{
   @Output() planetUpdatedEvent = new EventEmitter();
   currentPlanet: Planet = {
     Name: "New Planet",    
-    Class: "Unknown"
+    Class: "Unknown",
+    Seed: Math.random()*1000
   }
   editor: Editor = new Editor;
 

@@ -29,7 +29,8 @@ export class SystemService {
       CampaignId: this.campaignId,
       SystemId: systemId,
       Name: 'New Planet',
-      Class: 'Unknown'
+      Class: 'Unknown',
+      Seed: Math.random()*1000
     })
     this.refreshSystems();
   }
