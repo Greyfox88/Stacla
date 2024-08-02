@@ -94,6 +94,13 @@ export class SystemComponent implements OnInit, OnDestroy{
     return styleString;
   }
 
+  getPlanetClass(planet: Planet){
+    let classString = 'class-d-planet';
+    if(planet.Class!=undefined && planet.Class!="Unknown")
+      classString = `class-${planet.Class}-planet`.toLowerCase();      
+    return classString;
+  }
+
   getRingStyle(size:number){
     let ringSize = size/5;
     let ringMargin = size/10;

@@ -21,9 +21,9 @@
       <div id="solar-system" class="sun">
         @for(planet of currentSystem.Planets; track planet)
         {
-          <div id="mercury" class="orbit" [style]="getOrbitStyle(planet)">
+          <div class="orbit" [style]="getOrbitStyle(planet)">
             <div class="pos">
-              <div class="planet" [style]="getPlanetStyle(planet)">
+              <div class="planet" [class]="getPlanetClass(planet)" [style]="getPlanetStyle(planet)">
                 @if(planet?.Ringed){
                   <div class="ring" [style]="getRingStyle(planet.Size)"></div>
                 }

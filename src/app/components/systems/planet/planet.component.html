@@ -7,10 +7,22 @@
     </label>
 
     <label class="form-control w-full max-w-xs">
-    <div class="label">
-        <span i18n class="label-text">Class</span>
-    </div>
-    <input type="text" [(ngModel)]="currentPlanet.Class" class="input input-bordered w-full max-w-xs" />
+      <div class="label">
+          <span i18n class="label-text">Class</span>
+      </div>
+      <select id="classBox" class="select select-bordered w-full max-w-xs" [(ngModel)]="currentPlanet.Class">
+        <option i18n selected></option>
+          <option value="D">D</option> 
+          <option value="G">G</option> 
+          <option value="H">H</option> 
+          <option value="J">J - Gas Giant</option> 
+          <option value="K">K</option> 
+          <option value="L">L</option> 
+          <option value="M">M - Earthlike</option>
+          <option value="N">N</option>
+          <option value="T">T - Gas Giant</option>
+          <option value="Y">Y</option>    
+      </select>
     </label>
 
     <label class="form-control w-full max-w-xs">
@@ -18,7 +30,7 @@
           <span i18n class="label-text">Ringed</span>
       </div>
       <input type="checkbox"  [(ngModel)]="currentPlanet.Ringed"  class="checkbox" />
-      </label>
+    </label>
 </div>
 <br/>
 <div class="col-span-1">

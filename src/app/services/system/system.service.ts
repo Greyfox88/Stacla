@@ -30,12 +30,39 @@ export class SystemService {
       CampaignId: this.campaignId,
       SystemId: systemId,
       Name: 'New Planet',
-      Class: 'Unknown',
+      Class: this.getPlanetClass(seed),
       Seed: seed,
       Ringed: seed > 750,
       Size: 10
     })
     this.refreshSystems();
+  }
+
+  getPlanetClass(seed: number): string {
+    let planetClass = "D";
+    let selector = seed.toString().charAt(1); //Use the 2nd number as a selector
+    console.log(selector);
+    if(selector=="0")
+      planetClass = "D";
+    if(selector=="1")
+      planetClass = "G";
+    if(selector=="2")
+      planetClass = "H";
+    if(selector=="3")
+      planetClass = "J";
+    if(selector=="4")
+      planetClass = "K";
+    if(selector=="5")
+      planetClass = "L";
+    if(selector=="6")
+      planetClass = "M";
+    if(selector=="7")
+      planetClass = "N";
+    if(selector=="8")
+      planetClass = "T";
+    if(selector=="9")
+      planetClass = "Y";
+    return planetClass;
   }
 
   refreshSystems(): void {

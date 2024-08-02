@@ -107,7 +107,7 @@ export interface Planet extends CampaignObject {
   Id?: number;
   SystemId?: number;
   Name: string;
-  Class: string;
+  Class?: string;
   Seed?: number;
 
   Size: number;
