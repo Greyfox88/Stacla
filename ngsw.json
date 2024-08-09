@@ -1,6 +1,6 @@
 {
   "configVersion": 1,
-  "timestamp": 1723198014472,
+  "timestamp": 1723199153503,
   "index": "/Stacla/index.html",
   "assetGroups": [
     {
@@ -13,7 +13,7 @@
       "urls": [
         "/Stacla/favicon.ico",
         "/Stacla/index.html",
-        "/Stacla/main-DHPEXEW5.js",
+        "/Stacla/main-CST2T5AN.js",
         "/Stacla/polyfills-N6LQB2YD.js",
         "/Stacla/styles-XVHFDA65.css"
       ],
@@ -52,8 +52,8 @@
     "/Stacla/assets/screenshots/Desktop.png": "035ce3d03fef28406f4966f25f7d710a837e44a5",
     "/Stacla/assets/screenshots/Mobile.png": "6f03036ecf3b79de34011990880c6c165c9e85d0",
     "/Stacla/favicon.ico": "9c39f434fe1261f68c5e3eefdf734630d99c5670",
-    "/Stacla/index.html": "e7b08dd031fd0c4cb320db4bcc022d5b0be1c830",
-    "/Stacla/main-DHPEXEW5.js": "ec4ad27f6f232ffa545f92d420cbd5bb7617a3a4",
+    "/Stacla/index.html": "3491ea0588b83b31428dc6f8ab3788e927dfa796",
+    "/Stacla/main-CST2T5AN.js": "072ebd3aa66d1b07d6207fe184db4909e8f7aeca",
     "/Stacla/polyfills-N6LQB2YD.js": "52a57fff1bfa58a16f07a379b0cecf9fd01868e2",
     "/Stacla/styles-XVHFDA65.css": "a0f4b624cc8da121aae4d6fbc43ac6b532ed6c8c"
   },
