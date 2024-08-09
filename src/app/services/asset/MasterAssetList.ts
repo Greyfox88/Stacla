@@ -1050,6 +1050,60 @@ export class MasterAssetList{
 
         //TNG/DS9/VOY Era
         {
+            Name: "Bajoran Raider",
+            Class: "Bajoran Raider",
+            Scale: 1,
+            Traits: "Bajoran Escort\nSub-Impulse Raider",
+            Talents: "Rugged Design",
+          
+            SysComms: 6,
+            SysComputers: 5,
+            SysEngines: 6,
+            SysSensors: 5,
+            SysStructure: 6,
+            SysWeapons: 6,
+          
+            DeptCommand: 0,
+            DeptConn: 1,
+            DeptSecurity: 1,
+            DeptEngineering: 1,
+            DeptScience: 0,
+            DeptMedical: 0,  
+          
+            Era: "TNG",
+            Faction: "Bajoran Republic",
+            Type: "Shuttlecraft",
+
+            Notes: "Customised Stats"
+        },
+        {
+            Name: "Bajoran Denorios Interceptor",
+            Class: "Denorios Class Interceptor",
+            Scale: 3,
+            Traits: "Bajoran Escort",
+            Talents: "Rugged Design\nFast Targeting Systems\nImproved Impulse Drive",
+          
+            SysComms: 10,
+            SysComputers: 9,
+            SysEngines: 11,
+            SysSensors: 10,
+            SysStructure: 9,
+            SysWeapons: 8,
+          
+            DeptCommand: 2,
+            DeptConn: 4,
+            DeptSecurity: 4,
+            DeptEngineering: 2,
+            DeptScience: 1,
+            DeptMedical: 2,  
+          
+            Era: "TNG",
+            Faction: "Bajoran Republic",
+            Type: "Starship",
+
+            Notes: "Stats from Starship Creation"
+        },
+        {
             Name: "Cardassian Galor Class",
             Class: "Galor Class",
             Scale: 4,

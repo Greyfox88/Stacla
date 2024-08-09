@@ -206,6 +206,66 @@ export class MasterCharacterList{
             Faction: "Animal"
         },
         {
+            Name: "Bajoran Militia",
+            Traits: "Bajoran",
+            Rank: "Captain",
+            Environment: "Homeworld",
+            EarlyOutlook: "To Protect",
+            Education: "Allied Military / Militia",
+            CareerEvents: "Required to take command, Death of a friend",
+            CareerLength: "Veteran",
+            Values: "Sometimes a small force is better than a bigger one\nResistance is never futile\nGood leaders get their hands dirty\nThe best protection is early detection",
+            Focuses: "Survival\nSaboteur\nCamouflage\nGuerrilla Warfare\nHand Phasers\nTeam Dynamics",
+
+            AttControl: 10,
+            AttDaring: 12,
+            AttFitness: 9,
+            AttInsight: 9,
+            AttPresence: 8,
+            AttReason: 8,
+          
+            DisCommand: 4,
+            DisConn: 2,
+            DisSecurity: 5,
+            DisEngineering: 2,
+            DisScience: 1,
+            DisMedical: 2,
+          
+            Notes: "Stats from Character Creation",
+
+            Faction: "Bajoran Republic"
+        },
+        {
+            Name: "Bajoran Vedek",
+            Traits: "Bajoran",
+            Rank: "Vedek",
+            Environment: "Isolated Colony",
+            EarlyOutlook: "Diplomacy and Politics (A)",
+            Education: "Civilian / Politician",
+            CareerEvents: "Serious Injury, Death of a Friend",
+            CareerLength: "Experienced",
+            Values: "Healing comes from the heart\nFaith is the best weapon against evil\nA civilization is nothing without it's people\nThe Prophets protect us",
+            Focuses: "Religion\nEmotional Intelligence\nHistory\nInspiration\nBedside Manner\nEthics",
+
+            AttControl: 9,
+            AttDaring: 8,
+            AttFitness: 8,
+            AttInsight: 11,
+            AttPresence: 10,
+            AttReason: 10,
+          
+            DisCommand: 5,
+            DisConn: 2,
+            DisSecurity: 1,
+            DisEngineering: 1,
+            DisScience: 3,
+            DisMedical: 4,
+          
+            Notes: "Stats from Character Creation",
+
+            Faction: "Bajoran Republic"
+        },
+        {
             Name: "Cardassian Gul",
             Traits: "Cardassian",
             Rank: "Gul",
