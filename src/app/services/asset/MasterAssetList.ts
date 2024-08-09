@@ -1053,7 +1053,7 @@ export class MasterAssetList{
             Name: "Bajoran Raider",
             Class: "Bajoran Raider",
             Scale: 1,
-            Traits: "Bajoran Escort\nSub-Impulse Raider",
+            Traits: "Bajoran Raider\nSub-Impulse Raider",
             Talents: "Rugged Design",
           
             SysComms: 6,

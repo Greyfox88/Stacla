@@ -7,14 +7,14 @@
 
   <!--Tabs-->
   <div role="charactertablist" class="tabs tabs-lifted">
-      <input type="radio" name="CharacterTabs" role="tab" class="tab" aria-label="All" checked/>
-      <div role="tabpanel" class="tab-content bg-base-100 border-base-300 rounded-box p-6"><app-characterlist/></div>
+      <input type="radio" name="CharacterTabs" role="tab" class="tab" attr.aria-label="{{'All' | translate}}" checked/>
+      <div role="tabpanel" class="tab-content bg-base-100 border-base-300 rounded-box"><app-characterlist/></div>
     
-      <input type="radio" name="CharacterTabs" role="tab" class="tab" aria-label="Crew"  />
-      <div role="tabpanel" class="tab-content bg-base-100 border-base-300 rounded-box p-6"><app-characterlist [CrewCharList]="true"/></div>
+      <input type="radio" name="CharacterTabs" role="tab" class="tab" attr.aria-label="{{'Crew' | translate}}"  />
+      <div role="tabpanel" class="tab-content bg-base-100 border-base-300 rounded-box"><app-characterlist [CrewCharList]="true"/></div>
     
-      <input type="radio" name="CharacterTabs" role="tab" class="tab" aria-label="Scene" />
-      <div role="tabpanel" class="tab-content bg-base-100 border-base-300 rounded-box p-6"><app-characterlist [SceneCharList]="true"/></div>
+      <input type="radio" name="CharacterTabs" role="tab" class="tab" attr.aria-label="{{'Scene' | translate}}" />
+      <div role="tabpanel" class="tab-content bg-base-100 border-base-300 rounded-box"><app-characterlist [SceneCharList]="true"/></div>
     </div>
 </div>
 

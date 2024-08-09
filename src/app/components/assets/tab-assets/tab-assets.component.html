@@ -9,13 +9,13 @@
     <!--Tabs-->
     <div role="assettablist" class="tabs tabs-lifted">
         <input type="radio" name="AssetTabs" role="tab" class="tab" attr.aria-label="{{'All' | translate}}" checked/>
-        <div role="tabpanel" class="tab-content bg-base-100 border-base-300 rounded-box p-6"><app-assetlist/></div>
+        <div role="tabpanel" class="tab-content bg-base-100 border-base-300 rounded-box"><app-assetlist/></div>
       
         <input type="radio" name="AssetTabs" role="tab" class="tab" attr.aria-label="{{'Fleet' | translate}}"  />
-        <div role="tabpanel" class="tab-content bg-base-100 border-base-300 rounded-box p-6"><app-assetlist [FleetAssetList]="true"/></div>
+        <div role="tabpanel" class="tab-content bg-base-100 border-base-300 rounded-box"><app-assetlist [FleetAssetList]="true"/></div>
       
         <input type="radio" name="AssetTabs" role="tab" class="tab" attr.aria-label="{{'Scene' | translate}}" />
-        <div role="tabpanel" class="tab-content bg-base-100 border-base-300 rounded-box p-6"><app-assetlist [SceneAssetList]="true"/></div>
+        <div role="tabpanel" class="tab-content bg-base-100 border-base-300 rounded-box"><app-assetlist [SceneAssetList]="true"/></div>
       </div>
   </div>
 

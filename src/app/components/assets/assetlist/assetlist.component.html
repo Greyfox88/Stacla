@@ -1,16 +1,18 @@
-<div class="grid grid-cols-1 gap-2">
+<div class="grid grid-cols-1 gap-2 lcars-list">
     @for(asset of assetList; track asset)
     {
         @if(asset!=undefined)
         {
             @if((FleetAssetList==false || (FleetAssetList && asset.IsInFleet)) && (SceneAssetList==false || (SceneAssetList && asset.IsInScene)))
-            {
-                <button class="btn btn-primary rounded-full max-w-96" type="button" (click)="focusAsset(asset.Id)">{{ asset.Name }}</button>
+            {                
                 @if(focusedAssetId==asset.Id)
                 {
-                    <div class="divider"></div>
-                    <app-asset (assetUpdatedEvent)="refreshAssets()" [assetId]="asset.Id"/>  
-                    <div class="divider"></div> 
+                    <button class="btn btn-secondary rounded-full w-full max-w-96" type="button" (click)="focusAsset(asset.Id)">{{ asset.Name }}</button>
+                    <app-asset (assetUpdatedEvent)="refreshAssets()" [assetId]="asset.Id" class="p-6"/>  
+                } 
+                @else
+                {
+                    <button class="btn btn-primary rounded-full w-full max-w-96" type="button" (click)="focusAsset(asset.Id)">{{ asset.Name }}</button>
                 }
             }
         }    

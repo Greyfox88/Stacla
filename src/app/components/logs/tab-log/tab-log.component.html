@@ -1,16 +1,20 @@
 <div class="grid grid-cols-1 gap-2">
     <button class="btn btn-warning join-item rounded-full max-w-48" (click)="newEntry()">New Entry</button>
-    @for(log of logs; track log)
-    {
-        @if(log!=undefined)
+    <div class="grid grid-cols-1 gap-2 lcars-list">
+        @for(log of logs; track log)
         {
-            <button class="btn btn-primary rounded-full max-w-96" type="button" (click)="focusLog(log.Id)">{{ log.Title }}</button>
-            @if(focusedLogId==log.Id)
+            @if(log!=undefined)
             {
-                <div class="divider"></div>
-                <app-log (logUpdatedEvent)="refreshLogs()" [logId]="log.Id"/>  
-                <div class="divider"></div> 
-            }
-        }    
-    }   
+                @if(focusedLogId==log.Id)
+                {
+                    <button class="btn btn-secondary rounded-full w-full max-w-96" type="button" (click)="focusLog(log.Id)">{{ log.Title }}</button>
+                    <app-log (logUpdatedEvent)="refreshLogs()" [logId]="log.Id"/>  
+                }
+                @else
+                {
+                    <button class="btn btn-primary rounded-full w-full max-w-96" type="button" (click)="focusLog(log.Id)">{{ log.Title }}</button>
+                }
+            }    
+        }   
+    </div>
 </div>

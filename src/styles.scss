@@ -52,3 +52,19 @@ app-toast, .toast-class {   z-index: 2; }
     border-color: transparent transparent transparent orange;
     border-width: 2px;
 }
+
+.lcars-list {
+    padding-top: 1.5rem;
+    padding-bottom: 1.5rem;
+
+    button {
+        margin: auto;
+    }
+}
+
+.lcars-focused-panel {
+    background-color:azure;
+
+
+}
+
