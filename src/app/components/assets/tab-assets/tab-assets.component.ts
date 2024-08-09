@@ -19,9 +19,9 @@ import { TranslateModule, TranslateService } from '@ngx-translate/core';
 export class TabAssetsComponent {
   assetService = inject(AssetService)
   translateService = inject(TranslateService);
-  eras = [...new Set(this.assetService.masterAssetList.map(item => item.Era))];
-  factions = [...new Set(this.assetService.masterAssetList.map(item => item.Faction))];
-  types = [...new Set(this.assetService.masterAssetList.map(item => item.Type))];
+  eras = [...new Set(this.assetService.masterAssetList.map(item => item.Era).sort())];
+  factions = [...new Set(this.assetService.masterAssetList.map(item => item.Faction).sort())];
+  types = [...new Set(this.assetService.masterAssetList.map(item => item.Type).sort())];
   filteredAssetList = this.assetService.masterAssetList;
 
   eraFilter = "";

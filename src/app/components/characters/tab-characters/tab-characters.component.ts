@@ -3,28 +3,30 @@ import { CharacterlistComponent } from '../characterlist/characterlist.component
 import { CharacterService } from '../../../services/character/character.service';
 import { Character } from '../../../services/database/database.service';
 import { FormsModule } from '@angular/forms';
+import { TranslateModule, TranslateService } from '@ngx-translate/core';
 
 @Component({
   selector: 'app-tab-characters',
   standalone: true,
   imports: [
     CharacterlistComponent,
-    FormsModule
+    FormsModule,
+    TranslateModule
   ],
   templateUrl: './tab-characters.component.html',
   styleUrl: './tab-characters.component.scss'
 })
 export class TabCharactersComponent {
   characterService = inject(CharacterService);
-  eras = [...new Set(this.characterService.masterCharacterList.map(item => item.Era))];
-  factions = [...new Set(this.characterService.masterCharacterList.map(item => item.Faction))];
-  traits = [...new Set(this.characterService.masterCharacterList.map(item => item.Traits))];
+  translateService = inject(TranslateService);
+  eras = [...new Set(this.characterService.masterCharacterList.map(item => item.Era).sort())];
+  factions = [...new Set(this.characterService.masterCharacterList.map(item => item.Faction).sort())];
+  traits = [...new Set(this.characterService.masterCharacterList.map(item => item.Traits).sort())];
   filteredCharacterList = this.characterService.masterCharacterList;
-  //Warch out, these are currently magic string used in the filter below
-  eraFilter = "Era";
-  factionFilter = "Faction";
-  traitFilter = "Trait";
 
+  eraFilter = "";
+  factionFilter = "";
+  traitFilter = "";
 
   newCharacter(){
     this.characterService.newCharacter();
@@ -39,6 +41,6 @@ export class TabCharactersComponent {
 
   filterChange()
   {
-    this.filteredCharacterList = this.characterService.masterCharacterList.filter((character) => (this.eraFilter == "Era" || character.Era == this.eraFilter) && (this.factionFilter == "Faction" || character.Faction == this.factionFilter) && (this.traitFilter == "Trait" || character.Traits == this.traitFilter))
+    this.filteredCharacterList = this.characterService.masterCharacterList.filter((character) => (this.eraFilter == "" || character.Era == this.eraFilter) && (this.factionFilter == "" || character.Faction == this.factionFilter) && (this.traitFilter == "" || character.Traits == this.traitFilter))
   }
 }

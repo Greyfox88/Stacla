@@ -23,27 +23,40 @@
     <h3 i18n class="text-lg font-bold">Preset Assets</h3>
     <div class="grid grid-cols-3 gap-2 items-center">
       <p i18n class="col-span-3 text-center">Filters</p>
-      <select class="select select-bordered w-full max-w-xs" (change)="filterChange()" [(ngModel)]="eraFilter">
-        <option i18n selected>Era</option>
-        @for(Era of eras; track Era)
-        {
-            <option>{{Era}}</option> 
-        }
-      </select>
-      <select class="select select-bordered w-full max-w-xs" (change)="filterChange()" [(ngModel)]="factionFilter">
-        <option i18n selected>Faction</option>
-        @for(Faction of factions; track Faction)
-        {
-            <option>{{Faction}}</option> 
-        }
-      </select>
-      <select class="select select-bordered w-full max-w-xs" (change)="filterChange()" [(ngModel)]="traitFilter">
-        <option i18n selected>Trait</option>
-        @for(Trait of traits; track Trait)
-        {
-            <option>{{Trait}}</option> 
-        }
-      </select>
+
+      <div class="relative">
+        <select id="eraFilterBox" class="select select-bordered w-full max-w-xs" (change)="filterChange()" [(ngModel)]="eraFilter">
+          <option i18n selected></option>
+          @for(Era of eras; track Era)
+          {
+              <option>{{Era}}</option> 
+          }
+        </select>
+        <label for="eraFilterBox" class="absolute text-sm text-gray-500 dark:text-gray-400 duration-300 transform -translate-y-4 scale-75 top-4 z-10 origin-[0] start-2.5 peer-focus:text-blue-600 peer-focus:dark:text-blue-500 peer-placeholder-shown:scale-100 peer-placeholder-shown:translate-y-0 peer-focus:scale-75 peer-focus:-translate-y-4 rtl:peer-focus:translate-x-1/4 rtl:peer-focus:left-auto">{{'Era' | translate}}</label>
+      </div>
+
+      <div class="relative">
+        <select id="factionFilterBox" class="select select-bordered w-full max-w-xs" (change)="filterChange()" [(ngModel)]="factionFilter">
+          <option i18n selected></option>
+          @for(Faction of factions; track Faction)
+          {
+              <option>{{Faction}}</option> 
+          }
+        </select>
+        <label for="factionFilterBox" class="absolute text-sm text-gray-500 dark:text-gray-400 duration-300 transform -translate-y-4 scale-75 top-4 z-10 origin-[0] start-2.5 peer-focus:text-blue-600 peer-focus:dark:text-blue-500 peer-placeholder-shown:scale-100 peer-placeholder-shown:translate-y-0 peer-focus:scale-75 peer-focus:-translate-y-4 rtl:peer-focus:translate-x-1/4 rtl:peer-focus:left-auto">{{'Faction' | translate}}</label>
+      </div>
+
+      <div class="relative">
+        <select id="traitFilterBox" class="select select-bordered w-full max-w-xs" (change)="filterChange()" [(ngModel)]="traitFilter">
+          <option i18n selected></option>
+          @for(Trait of traits; track Trait)
+          {
+              <option>{{Trait}}</option> 
+          }
+        </select>
+        <label for="traitFilterBox" class="absolute text-sm text-gray-500 dark:text-gray-400 duration-300 transform -translate-y-4 scale-75 top-4 z-10 origin-[0] start-2.5 peer-focus:text-blue-600 peer-focus:dark:text-blue-500 peer-placeholder-shown:scale-100 peer-placeholder-shown:translate-y-0 peer-focus:scale-75 peer-focus:-translate-y-4 rtl:peer-focus:translate-x-1/4 rtl:peer-focus:left-auto">{{'Trait' | translate}}</label>
+      </div>
+
       <div class="divider col-span-3 my-0"></div>
     </div>
     <div class="grid grid-cols-1 gap-2 items-center">
